@@ -1,0 +1,43 @@
+.card {
+    border-bottom: 1px solid #EBEEF5;
+}
+
+header {
+    position: relative;
+    padding: 0.5rem;
+    height: 2.5rem;
+    letter-spacing: 0.5rem;
+    cursor: pointer;
+
+    label {
+        line-height: 1.5rem;
+        font-size: 0.9rem;
+        font-weight: 600;
+    }
+
+    &::after {
+        position: absolute;
+        right: 0rem;
+        content: '\e61c';
+        font-family: iconfont;
+        line-height: 1.5rem;
+    }
+}
+
+main {
+    max-height: 0rem;
+    transition-duration: 0.3s;
+    overflow: hidden;
+}
+
+.card-btns {
+    padding: 0.5rem;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 0.5rem;
+    overflow: hidden;
+}
+
+.card-expand {
+    max-height: 25rem;
+}

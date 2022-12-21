@@ -1,0 +1,54 @@
+main {
+    display: flex;
+    height: calc(100vh - 3rem);
+}
+
+aside {
+    width: 16rem;
+    height: 100%;
+    flex-shrink: 0;
+}
+
+article {
+    flex: 1;
+    min-width: 30rem;
+    border-left: 1px solid #EBEEF5;
+    border-right: 1px solid #EBEEF5;
+}
+
+section {
+    height: calc(100% - 2.5rem);
+    background-color: #f1f2f3;
+    overflow-y: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}
+
+div {
+    padding: 0.5rem;
+    height: 100%;
+    width: 100%;
+}
+
+div:last-of-type {
+    padding-top: 0rem;
+}
+
+header {
+    padding: 0.5rem 1.5rem;
+    height: 3rem;
+    line-height: 2rem;
+    border-bottom: 1px solid #EBEEF5;
+
+    h3 {
+        font-weight: 500;
+        color: darkcyan;
+    }
+}
+
+nav {
+    height: 2.5rem;
+    border-bottom: 1px solid #EBEEF5;
+}

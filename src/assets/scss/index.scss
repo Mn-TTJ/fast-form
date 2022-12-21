@@ -1,0 +1,19 @@
+* {
+    padding: 0rem;
+    margin: 0rem;
+    box-sizing: border-box;
+}
+
+
+body {
+    overflow: hidden;
+}
+
+/* CDN 服务仅供平台体验和调试使用，平台不承诺服务的稳定性，企业客户需下载字体包自行发布使用并做好备份。 */
+@font-face {
+    font-family: 'iconfont';
+    /* Project id 3834040 */
+    src: url('//at.alicdn.com/t/c/font_3834040_sft45zia95m.woff2?t=1671549346975') format('woff2'),
+        url('//at.alicdn.com/t/c/font_3834040_sft45zia95m.woff?t=1671549346975') format('woff'),
+        url('//at.alicdn.com/t/c/font_3834040_sft45zia95m.ttf?t=1671549346975') format('truetype');
+}
