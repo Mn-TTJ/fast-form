@@ -1,6 +1,6 @@
 <template>
     <header>
-        <h3>fast-form</h3>
+        <h3>Fast-Form&nbsp;Ver1.0</h3>
     </header>
     <main>
         <aside>

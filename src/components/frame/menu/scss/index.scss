@@ -1,4 +1,4 @@
-.library {
+.menu {
     height: 100%;
     overflow: hidden;
 }
@@ -9,8 +9,7 @@ main {
     transition-duration: 0.3s;
 }
 
-.components,
-.layout {
+.menu-site {
     padding: 0rem 0.2rem;
     width: 100%;
     height: 100%;
@@ -22,6 +21,6 @@ main {
     }
 }
 
-.library-change {
+.menu-change {
     transform: translateX(-100%);
 }
