@@ -1,7 +1,8 @@
 export default [
     {
         label: '栅格',
-        icon: "&#xe608;"
+        icon: "&#xe608;",
+        name: 'grid'
     }, {
         label: '表格',
         icon: '&#xe63e;'

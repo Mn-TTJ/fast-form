@@ -3,7 +3,7 @@
         <template #one>
             <Card v-for="card in cardConfig" :key="card.label" :label="card.label">
                 <DragBox v-for="component in card.components" :key="component.label" :label="component.label"
-                    :icon="component.icon"></DragBox>
+                    :icon="component.icon" :name="component.name"></DragBox>
             </Card>
         </template>
         <template #two>

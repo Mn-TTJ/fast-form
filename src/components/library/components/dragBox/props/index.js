@@ -1,4 +1,5 @@
 export default {
     label: String,
-    icon: String
+    icon: String,
+    name: String
 }
