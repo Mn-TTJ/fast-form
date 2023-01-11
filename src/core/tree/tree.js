@@ -1,4 +1,8 @@
 const node = function (isEidtor) {
+    /*
+    组件必须附带一个编辑框，因此树由编辑框和拖拽目标框组成，
+    vNode记录编辑框的组件，props记录组件的参数，pointer用0/1记录编辑框和组件的父子关系
+    */
     this.isEidtor = isEidtor
     this.isDrogger = !isEidtor
     this.vNode = null
@@ -7,6 +11,8 @@ const node = function (isEidtor) {
     this.children = []
 }
 
+// 所有的拖拽目标框记录于map在于添加时找到父节点，
+// 所有编辑框记录于map在于点击编辑框时快速定位，方便于设置props
 const nodes = new Map()
 
 const tree = []
@@ -17,7 +23,6 @@ const addNode = (id, vNode, parent) => {
     if (!parent) pNode = tree
     else pNode = nodes.get(parent).children
     pNode.push(vNode)
-    console.log(tree)
 }
 
 export { node, addNode }

@@ -16,6 +16,7 @@
             <Coding></Coding>
         </template>
     </Structure>
+    <Curtain></Curtain>
 </template>
   
 <script setup>
@@ -25,4 +26,5 @@ import Configure from '../components/configure/Configure.vue';
 import Options from '../components/options/Options.vue';
 import Operation from '@/components/panel/operation/Operation.vue';
 import Coding from '@/components/panel/coding/Coding.vue';
+import Curtain from '../components/curtain/Curtain.vue';
 </script>
