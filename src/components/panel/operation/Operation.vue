@@ -1,13 +1,11 @@
 <template>
-    <div class="operation" :class="{ 'dragover': dragSign }" droppable="true" @dragover.prevent
-        @drop.prevent="dropEvent">
+    <div class="operation">
+        <DrogBox></DrogBox>
     </div>
 </template>
 
 <script setup>
-import { dragSign } from '@/core/tree/drag.js'
-import operation from './operation'
-const { dropEvent } = operation()
+import DrogBox from './components/drogBox/DrogBox.vue';
 </script>
 
 <style lang="scss" scoped>

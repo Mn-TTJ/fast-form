@@ -1,15 +1,17 @@
 .edit-box {
-    margin-bottom: 1px;
     position: relative;
-    padding: 0.2rem;
+    padding: 0.1rem;
     min-height: 1.4rem;
-    border: 1px solid darkcyan;
     overflow: hidden;
+}
+
+.edit-border {
+    border: 1px solid darkcyan;
 }
 
 .edit-box-handle {
     position: absolute;
-    display: flex;
+    display: none;
     align-items: center;
     bottom: 0rem;
     right: 0rem;
@@ -24,4 +26,8 @@
         color: white;
         cursor: pointer;
     }
+}
+
+.edit-show {
+    display: flex;
 }

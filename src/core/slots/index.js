@@ -1,8 +1,9 @@
-import grid from './Grid/grid'
+import grid from './container/grid/grid'
+import input from './base/input/input'
 
 const slots = new Map()
 
-const allSlots = [['grid', grid]]
+const allSlots = [['grid', grid], ['input', input]]
 
 const slotsBuilder = new Map(allSlots)
 

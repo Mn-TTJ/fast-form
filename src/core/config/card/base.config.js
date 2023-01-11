@@ -1,7 +1,8 @@
 export default [
     {
         label: '单行输入',
-        icon: '&#xe692;'
+        icon: '&#xe692;',
+        name: 'input'
     }, {
         label: '多行输入',
         icon: '&#xe693;'
