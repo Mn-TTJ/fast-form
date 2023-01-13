@@ -1,0 +1,29 @@
+.leaf {
+    border-left: 1px solid darkcyan;
+}
+
+.leaf-ndoe {
+    padding-bottom: 0.1rem;
+    position: relative;
+    padding-left: 1rem;
+    cursor: pointer;
+
+    &::before {
+        position: absolute;
+        display: block;
+        content: '';
+        left: 0rem;
+        top: 50%;
+        width: 1rem;
+        height: 1px;
+        background-color: darkcyan;
+    }
+
+    &:hover {
+        color: darkcyan;
+    }
+}
+
+.leaf-children {
+    margin-left: 1rem;
+}

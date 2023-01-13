@@ -15,7 +15,7 @@
 <script setup>
 import options from '../../core/config/options/options';
 import { turnOnCurtain, setCurtain } from '@/core/store/store.js'
-import Tree from '../curtain/tree/Tree.vue';
+import Tree from '../curtain/components/tree/Tree.vue';
 </script>
 
 <style lang="scss" scoped>
