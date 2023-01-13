@@ -1,4 +1,4 @@
-import { reactive } from "vue"
+import { reactive, shallowRef } from "vue"
 
 const store = reactive({
     editor: Symbol(),
@@ -11,8 +11,11 @@ const setEditor = (editor) => store.editor = editor
 
 const setdroger = (droger) => store.droger = droger
 
-const setCurtain = (component) => store.curtainComponent = component
+const setCurtain = (component) => store.curtainComponent = shallowRef(component)
 
-const turnOnCurtain = (flag) => store.curtainSwicth = flag
+const turnOnCurtain = (flag) => {
+    store.curtainSwicth = flag
+    if (!flag) store.curtainComponent = null
+}
 
 export { store, setEditor, setdroger, turnOnCurtain, setCurtain }

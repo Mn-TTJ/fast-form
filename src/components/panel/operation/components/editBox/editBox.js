@@ -8,7 +8,7 @@ export default (props) => {
     const pId = props.pId ? props.pId : inject('pid', null)
 
     const Node = new node(true)
-    Node.cNode = props.cNode
+    Node.vNode = props.cNode
     addNode(id, Node, pId, -1)
 
     const selectd = () => setEditor(id)

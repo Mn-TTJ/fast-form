@@ -25,5 +25,29 @@ const addNode = (id, vNode, parent) => {
     pNode.push(vNode)
 }
 
-export { node, addNode }
+const getComponentTree = () => {
+    const componentTree = []
+
+    const getTree = (branch, components) => {
+        branch.forEach(element => {
+            if (element.isEidtor) {
+                const leaf = {
+                    vNode: element.vNode,
+                    children: new Array()
+                }
+                components.push(leaf)
+                getTree(element.children, leaf.children)
+            }
+            else {
+                getTree(element.children, components)
+            }
+        });
+    }
+
+    getTree(tree, componentTree)
+
+    return componentTree
+}
+
+export { node, addNode, getComponentTree }
 
