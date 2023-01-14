@@ -1,0 +1,13 @@
+section {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+
+    &>label {
+        flex: 4;
+    }
+
+    &>aside {
+        flex: 6;
+    }
+}

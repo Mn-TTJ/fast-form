@@ -6,7 +6,7 @@ const node = function (isEidtor) {
     this.isEidtor = isEidtor
     this.isDrogger = !isEidtor
     this.vNode = null
-    this.props = []
+    this.props = {}
     this.pointer = 0
     this.children = []
 }
@@ -49,5 +49,5 @@ const getComponentTree = () => {
     return componentTree
 }
 
-export { node, addNode, getComponentTree }
+export { node, nodes, addNode, getComponentTree }
 

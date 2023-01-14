@@ -4,7 +4,7 @@
             <label>{{ label }}</label>
         </header>
         <main :class="{ 'card-expand': expand }">
-            <div class="card-btns">
+            <div class="card-btns" :style="{ '--col': col }">
                 <slot></slot>
             </div>
         </main>
