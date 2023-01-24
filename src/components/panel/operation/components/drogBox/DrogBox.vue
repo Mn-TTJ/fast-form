@@ -8,7 +8,7 @@ import drogBox from './drogBox'
 import Props from './props/index';
 // eslint-disable-next-line
 const props = defineProps(Props)
-const { dropEvent, dragOverEvent, o } = drogBox()
+const { dropEvent, dragOverEvent, o } = drogBox(props)
 </script>
 
 <style lang="scss" scoped>

@@ -3,7 +3,7 @@ import { store, setdroger } from '@/core/store/store.js'
 import { render, reactive, computed, provide, inject } from 'vue'
 import { node, addNode } from '@/core/tree/tree.js'
 
-export default () => {
+export default (props) => {
     const id = Symbol()
     provide('pid', id)
 
@@ -16,7 +16,8 @@ export default () => {
 
     const o = reactive({
         'drogBox': true,
-        'dragOver': computed(() => store.droger == id)
+        'dragBorder': computed(() => props.border),
+        'dragOver': computed(() => store.droger == id),
     })
 
     const dropEvent = (event) => {

@@ -9,7 +9,9 @@ export default (props) => {
 
     const Node = new node(true)
     Node.vNode = props.cNode
-    addNode(id, Node, pId, -1)
+    Node.pointer = props.pointer
+    Node.props = props.cProps
+    addNode(id, Node, pId)
 
     const selectd = () => setEditor(id)
 
@@ -19,7 +21,7 @@ export default (props) => {
 
     const o = reactive({
         'edit-box': true,
-        'edit-border': computed(() => id == store.editor)
+        'edit-select': computed(() => id == store.editor)
     })
 
     const s = reactive({

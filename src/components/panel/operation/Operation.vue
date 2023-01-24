@@ -1,6 +1,6 @@
 <template>
     <div class="operation">
-        <DrogBox></DrogBox>
+        <DrogBox :border="false"></DrogBox>
     </div>
 </template>
 

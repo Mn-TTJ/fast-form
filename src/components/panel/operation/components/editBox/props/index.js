@@ -4,5 +4,6 @@ export default {
     pointer: {
         type: Number,
         default: 0
-    }
+    },
+    cProps: Object
 }
