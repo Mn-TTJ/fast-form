@@ -7,28 +7,34 @@ export default (slots, name) => {
     const uiCol = resolveComponent('ui-col')
 
     slots.set(name, (pId) => {
-        const children1 = reactive({
-            colCount: 12
+        const row = reactive({
+            justify: 'flex-start',
+            align: 'flex-start'
         })
 
-        const children2 = reactive({
-            colCount: 12
+        const col1 = reactive({
+            colCount: 12,
+            colOffset: 0
         })
 
-        return <EditBox cNode={uiRow} pId={pId}>
-            <uiRow>
-                <uiCol colCount={children1.colCount} >
-                    <EditBox cNode={uiCol} pointer={1} cProps={children1}>
+        const col2 = reactive({
+            colCount: 12,
+            colOffset: 0
+        })
+
+        return <EditBox cNode={uiRow} pId={pId} cProps={row}>
+            <uiRow {...row}>
+                <uiCol {...col1} >
+                    <EditBox cNode={uiCol} pointer={1} cProps={col1}>
                         <DrogBox></DrogBox>
                     </EditBox>
                 </uiCol>
-                <uiCol colCount={children2.colCount}>
-                    <EditBox cNode={uiCol} pointer={1} cProps={children2}>
+                <uiCol {...col2}>
+                    <EditBox cNode={uiCol} pointer={1} cProps={col2}>
                         <DrogBox></DrogBox>
                     </EditBox>
                 </uiCol>
             </uiRow>
         </EditBox>
-    }
-    )
+    })
 }

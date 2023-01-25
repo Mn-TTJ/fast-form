@@ -1,16 +1,12 @@
 <template>
     <Card label="常见属性" :col="1">
         <section>
-            <label>唯一名称</label>
-            <aside><ui-input v-model="name" @blur="getString(name, 'name')" /></aside>
-        </section>
-        <section>
             <label>列数</label>
-            <aside><ui-input v-model="colCount" @blur="getNumber(colCount, 'colCount')" /></aside>
+            <aside><ui-input v-model="colCount" @blur="getColCount" @keyup.enter="getColCount" /></aside>
         </section>
         <section>
             <label>偏移量</label>
-            <aside><ui-input /></aside>
+            <aside><ui-input v-model="colOffset" @blur="getColOffset" @keyup.enter="getColOffset" /></aside>
         </section>
     </Card>
 </template>
@@ -19,7 +15,7 @@
 import Card from '@/components/frame/card/Card.vue';
 import colCof from './colCof.js'
 import { defineExpose } from 'vue';
-const { name, colCount, reSet, getNumber, getString } = colCof()
+const { colOffset, colCount, reSet, getColCount, getColOffset } = colCof()
 defineExpose({ reSet })
 </script>
 
