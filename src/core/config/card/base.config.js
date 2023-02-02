@@ -5,7 +5,8 @@ export default [
         name: 'input'
     }, {
         label: '多行输入',
-        icon: '&#xe693;'
+        icon: '&#xe693;',
+        name: 'textarea'
     }, {
         label: '计数器',
         icon: '&#xe7f3;'

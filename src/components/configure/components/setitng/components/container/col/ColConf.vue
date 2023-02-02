@@ -13,9 +13,9 @@
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
-import colCof from './colCof.js'
+import colConf from './colConf.js'
 import { defineExpose } from 'vue';
-const { colOffset, colCount, reSet, getColCount, getColOffset } = colCof()
+const { colOffset, colCount, reSet, getColCount, getColOffset } = colConf()
 defineExpose({ reSet })
 </script>
 

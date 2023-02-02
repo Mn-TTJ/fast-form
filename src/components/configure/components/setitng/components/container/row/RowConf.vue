@@ -16,8 +16,8 @@
 <script setup>
 import { defineExpose } from 'vue';
 import Card from '@/components/frame/card/Card.vue';
-import rowCof from './rowCof';
-const { justify, align, reSet } = rowCof()
+import rowConf from './rowConf';
+const { justify, align, reSet } = rowConf()
 defineExpose({ reSet })
 </script>
 
