@@ -1,4 +1,3 @@
-import { nodes } from "@/core/tree/tree";
 import { store } from "@/core/store/store";
 import { ref, onMounted, watch } from "vue";
 export default function () {
@@ -8,7 +7,7 @@ export default function () {
     let cNode
 
     const reSet = () => {
-        cNode = nodes.get(store.editor)
+        cNode = store.cofNode
         if (!cNode) console.log("Error,can't find the component")
         justify.value = cNode.props.justify
         align.value = cNode.props.align

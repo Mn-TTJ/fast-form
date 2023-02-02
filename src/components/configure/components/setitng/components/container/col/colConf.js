@@ -1,4 +1,3 @@
-import { nodes } from "@/core/tree/tree";
 import { store } from "@/core/store/store";
 import { ref, onMounted } from "vue";
 export default function () {
@@ -25,7 +24,7 @@ export default function () {
     }
 
     const reSet = () => {
-        cNode = nodes.get(store.editor)
+        cNode = store.cofNode
         if (!cNode) console.log("Error,can't find the component")
         colCount.value = cNode.props.colCount
         colOffset.value = cNode.props.colOffset

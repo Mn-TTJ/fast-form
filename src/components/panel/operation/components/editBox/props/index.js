@@ -1,9 +1,5 @@
 export default {
-    pId: Symbol,
-    cNode: Object,
-    pointer: {
-        type: Number,
-        default: 0
-    },
+    reverse: Boolean,
+    cName: String,
     cProps: Object
 }

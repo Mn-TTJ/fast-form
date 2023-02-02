@@ -1,6 +1,5 @@
 import { store } from '@/core/store/store.js'
 import { shallowRef, watch } from 'vue'
-import { nodes } from '@/core/tree/tree.js'
 import components from './components/index'
 
 export default function (ele) {
@@ -9,12 +8,14 @@ export default function (ele) {
     const setComponents = new Map(components)
     let name = null
 
-    watch(() => store.editor, () => {
-        if (!store.editor) confComponent.value = null
+    watch(() => store.cofNode, () => {
+        if (!store.cofNode) {
+            confComponent.value = null
+            name = null
+        }
         else {
-            const node = nodes.get(store.editor)
-            if (name != node.vNode.name) {
-                name = node.vNode.name
+            if (name != store.cofNode.name) {
+                name = store.cofNode.name
                 confComponent.value = setComponents.get(name)
             }
             else ele.value.reSet()
