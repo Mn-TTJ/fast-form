@@ -20,5 +20,5 @@ defineExpose({ reSet })
 </script>
 
 <style lang="scss" scoped>
-@import '../scss/index.scss';
+@import '../../scss/index.scss';
 </style>

@@ -1,5 +1,6 @@
 import { store } from "@/core/store/store";
 import { ref, onMounted } from "vue";
+import { setNumber } from '@/core/utils/utils'
 export default function () {
 
     let colCount = ref(0)
@@ -10,26 +11,13 @@ export default function () {
 
     let cNode
 
-    const setNumber = (name, attr) => {
-        let last = attr.value
-        return () => {
-            const num = parseFloat(attr.value)
-            if (isNaN(num)) attr.value = last
-            else {
-                last = num,
-                    attr.value = num
-                cNode.props[name] = num
-            }
-        }
-    }
-
     const reSet = () => {
         cNode = store.cofNode
         if (!cNode) console.log("Error,can't find the component")
         colCount.value = cNode.props.colCount
         colOffset.value = cNode.props.colOffset
-        getColCount.value = setNumber('colCount', colCount)
-        getColOffset.value = setNumber('colOffset', colOffset)
+        getColCount.value = setNumber('colCount', colCount, cNode)
+        getColOffset.value = setNumber('colOffset', colOffset, cNode)
     }
 
     onMounted(reSet)

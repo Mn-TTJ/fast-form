@@ -14,7 +14,7 @@ export default function (ele) {
             name = null
         }
         else {
-            if (name != store.cofNode.name) {
+            if (name !== store.cofNode.name) {
                 name = store.cofNode.name
                 confComponent.value = setComponents.get(name)
             }

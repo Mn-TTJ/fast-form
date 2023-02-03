@@ -11,3 +11,17 @@ section {
         flex: 6;
     }
 }
+
+.new-btn,
+.del-btn {
+    display: inline-block;
+    width: 13.2rem;
+}
+
+.new-btn {
+    color: darkcyan;
+}
+
+.del-btn {
+    color: red;
+}
