@@ -6,8 +6,8 @@
 
 <script setup>
 import Leaf from './leaf/Leaf.vue';
-// import tree from './tree.js'
-// const { componentTree } = tree() 
+import tree from './tree.js'
+const { componentTree } = tree() 
 </script>
 
 <style lang="scss" scoped>

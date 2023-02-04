@@ -5,5 +5,6 @@ export default {
         type: String,
         default: 'default'
     },
-    reverse: Boolean
+    reverse: Boolean,
+    filter: Function
 }

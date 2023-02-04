@@ -5,7 +5,9 @@ const store = reactive({
     droger: Symbol(),
     cofNode: null,
     curtainSwicth: false,
-    curtainComponent: null
+    curtainComponent: null,
+    delNode: null,
+    delNodeParent: null
 })
 
 const setEditor = (editor) => store.editor = editor
@@ -16,9 +18,11 @@ const setCofNode = (node) => store.cofNode = node
 
 const setCurtain = (component) => store.curtainComponent = shallowRef(component)
 
+const setDelNode = (delNode, delNodeParent) => { store.delNode = delNode, store.delNodeParent = delNodeParent }
+
 const turnOnCurtain = (flag) => {
     store.curtainSwicth = flag
     if (!flag) store.curtainComponent = null
 }
 
-export { store, setEditor, setdroger, turnOnCurtain, setCurtain, setCofNode }
+export { store, setEditor, setdroger, turnOnCurtain, setCurtain, setCofNode, setDelNode }

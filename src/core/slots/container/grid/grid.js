@@ -26,16 +26,16 @@ export default (slots, name) => {
         return <EditBox cProps={row} cName={'grid-row'}>
             <ComponentBox cName='ui-row' cProps={row}>
                 <uiRow {...row}>
-                    <ComponentBox cName='ui-col' cProps={col1}>
+                    <ComponentBox cName='ui-col' cProps={col1} reverse>
                         <uiCol {...col1} >
-                            <EditBox cProps={col1} cName={'grid-col'}>
+                            <EditBox cProps={col1} cName={'grid-col'} reverse>
                                 <DrogBox></DrogBox>
                             </EditBox>
                         </uiCol>
                     </ComponentBox>
-                    <ComponentBox cName='ui-col' cProps={col2}>
+                    <ComponentBox cName='ui-col' cProps={col2} reverse>
                         <uiCol {...col2}>
-                            <EditBox cProps={col2} cName={'grid-col'}>
+                            <EditBox cProps={col2} cName={'grid-col'} reverse>
                                 <DrogBox></DrogBox>
                             </EditBox>
                         </uiCol>
