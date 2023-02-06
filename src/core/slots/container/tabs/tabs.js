@@ -7,31 +7,32 @@ export default (slots, name) => {
     const uiTabs = resolveComponent('ui-tabs')
     const uiTabsPanel = resolveComponent('ui-tab-panel')
 
-    slots.set(name, () => {
+    slots.set(name, (cProps) => {
 
-        const tabs = reactive({
-            active: 0,
-            height: 'auto',
-            width: '100%'
+        if (!cProps) cProps = reactive({
+            tabs: {
+                active: 0,
+                height: 'auto',
+                width: '100%'
+            },
+            panels: [
+                {
+                    cName: 'ui-tabs-panel',
+                    label: '1'
+                }, {
+                    cName: 'ui-tabs-panel',
+                    label: '2'
+                }, {
+                    cName: 'ui-tabs-panel',
+                    label: '3'
+                }
+            ]
         })
 
-        const panels = reactive([
-            {
-                cName: 'ui-tabs-panel',
-                label: '1'
-            }, {
-                cName: 'ui-tabs-panel',
-                label: '2'
-            }, {
-                cName: 'ui-tabs-panel',
-                label: '3'
-            }
-        ])
-
-        return <EditBox cName='tabs' cProps={{ tabs, panels }}>
-            <ComponentBox cName='ui-tabs' cProps={tabs}>
-                <uiTabs {...tabs}>
-                    {panels.map(({ cName, label }) => {
+        return <EditBox cName='tabs' cProps={cProps}>
+            <ComponentBox cName='ui-tabs' cProps={cProps.tabs}>
+                <uiTabs {...cProps.tabs}>
+                    {cProps.panels.map(({ cName, label }) => {
                         return <ComponentBox cName={cName} cProps={{ label }} key={label}>
                             <uiTabsPanel label={label}>
                                 <DrogBox></DrogBox>

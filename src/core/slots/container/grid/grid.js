@@ -7,35 +7,33 @@ export default (slots, name) => {
     const uiRow = resolveComponent('ui-row')
     const uiCol = resolveComponent('ui-col')
 
-    slots.set(name, () => {
-        const row = reactive({
-            justify: 'flex-start',
-            align: 'flex-start'
+    slots.set(name, (cProps) => {
+        if (!cProps) cProps = reactive({
+            row: reactive({
+                justify: 'flex-start',
+                align: 'flex-start'
+            }), col1: reactive({
+                colCount: 12,
+                colOffset: 0
+            }), col2: reactive({
+                colCount: 12,
+                colOffset: 0
+            })
         })
 
-        const col1 = reactive({
-            colCount: 12,
-            colOffset: 0
-        })
-
-        const col2 = reactive({
-            colCount: 12,
-            colOffset: 0
-        })
-
-        return <EditBox cProps={row} cName={'grid-row'}>
-            <ComponentBox cName='ui-row' cProps={row}>
-                <uiRow {...row}>
-                    <ComponentBox cName='ui-col' cProps={col1} reverse>
-                        <uiCol {...col1} >
-                            <EditBox cProps={col1} cName={'grid-col'} reverse>
+        return <EditBox cProps={cProps.row} cName={'grid-row'}>
+            <ComponentBox cName='ui-row' cProps={cProps.row}>
+                <uiRow {...cProps.row}>
+                    <ComponentBox cName='ui-col' cProps={cProps.col1} reverse>
+                        <uiCol {...cProps.col1} >
+                            <EditBox cProps={cProps.col1} cName={'grid-col'} reverse>
                                 <DrogBox></DrogBox>
                             </EditBox>
                         </uiCol>
                     </ComponentBox>
-                    <ComponentBox cName='ui-col' cProps={col2} reverse>
-                        <uiCol {...col2}>
-                            <EditBox cProps={col2} cName={'grid-col'} reverse>
+                    <ComponentBox cName='ui-col' cProps={cProps.col2} reverse>
+                        <uiCol {...cProps.col2}>
+                            <EditBox cProps={cProps.col2} cName={'grid-col'} reverse>
                                 <DrogBox></DrogBox>
                             </EditBox>
                         </uiCol>

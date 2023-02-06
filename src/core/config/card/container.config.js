@@ -13,13 +13,16 @@ export default [
         name: 'table'
     }, {
         label: '弹出窗口',
-        icon: '&#xe664;'
+        icon: '&#xe664;',
+        name: 'dialog'
     }, {
         label: '侧滑抽屉',
-        icon: '&#xe7de;'
+        icon: '&#xe7de;',
+        name: 'drawer'
     }, {
         label: '卡片',
-        icon: '&#xe674;'
+        icon: '&#xe674;',
+        name: 'flodCard'
     },
 ]
 

@@ -1,42 +1,45 @@
 import { resolveComponent, reactive } from "vue"
 import EditBox from '@/components/panel/operation/components/editBox/EditBox.vue'
 import ComponentBox from "@/components/panel/operation/components/componentBox/componentBox.vue"
+import { treeMethod } from "@/core/tree/tree"
 
 export default (slots, name) => {
     const uiTable = resolveComponent('ui-table')
     const uiTColumn = resolveComponent('ui-table-column')
 
-    slots.set(name, () => {
+    slots.set(name, (cProps) => {
 
-        const data = reactive([
-            {
-                aa: {
-                    label: 'aa',
-                },
-                bb: {
-                    label: 'bb'
-                },
-                cc: {
-                    label: 'cc'
-                }
+        if (!cProps) cProps = reactive({
+            table: {
+                border: true,
+                height: 'auto',
+                data: [
+                    {
+                        aa: {
+                            label: 'aa',
+                        },
+                        bb: {
+                            label: 'bb'
+                        },
+                        cc: {
+                            label: 'cc'
+                        }
+                    },
+                    {
+                        aa: {
+                            label: 'aa'
+                        },
+                        bb: {
+                            label: 'bb',
+                        },
+                        cc: {
+                            label: 'cc',
+                        },
+                    }
+                ]
             },
-            {
-                aa: {
-                    label: 'aa'
-                },
-                bb: {
-                    label: 'bb',
-                },
-                cc: {
-                    label: 'cc',
-                },
-                state: 2
-            }
-        ])
-
-        // const table=reactive({
-
-        // })
+            columns: [{ prop: 'aa', label: 'aa', width: 'auto' }, { prop: 'bb', label: 'bb', width: 'auto' }, { prop: 'cc', label: 'cc', width: 'auto' }]
+        })
 
         const filter = (nodeSet, prop, slot = 'default') => {
             for (let node of nodeSet[slot]) {
@@ -45,12 +48,19 @@ export default (slots, name) => {
             return true
         }
 
-        return <EditBox cName='table'>
-            <ComponentBox cName='ui-table'>
-                <uiTable data={data}>
-                    {Object.keys(data[0]).map((key) => {
-                        return <ComponentBox cName='ui-table-column' filter={filter} cProps={{ prop: key, label: key }}>
-                            <uiTColumn prop={key} label={key}></uiTColumn>
+        const reSort = (node) => {
+            const sortArr = cProps.columns.map((column) => {
+                return column.prop
+            })
+            treeMethod.reSortChild(node.slots.default, 'prop', sortArr)
+        }
+
+        return <EditBox cName='table' cProps={cProps}>
+            <ComponentBox cName='ui-table' cProps={cProps.table} reSort={reSort} key={cProps.key}>
+                <uiTable {...cProps.table}>
+                    {cProps.columns.map((column) => {
+                        return <ComponentBox cName='ui-table-column' filter={filter} cProps={column} key={column.prop}>
+                            <uiTColumn {...column}></uiTColumn>
                         </ComponentBox>
                     })}
                 </uiTable>

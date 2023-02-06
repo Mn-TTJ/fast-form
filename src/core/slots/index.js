@@ -1,12 +1,9 @@
-import grid from './container/grid/grid'
-import tabs from './container/tabs/tabs'
-import table from './container/table/table'
-import input from './base/input/input'
-import textarea from './base/textarea/textarea'
+import container from './container'
+import base from './base'
 
 const slots = new Map()
 
-const allSlots = [['grid', grid], ['input', input], ['tabs', tabs], ['table', table], ['textarea', textarea]]
+const allSlots = [...container, ...base]
 
 const slotsBuilder = new Map(allSlots)
 

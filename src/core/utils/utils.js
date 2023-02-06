@@ -24,4 +24,6 @@ const setLimit = (target, attr, limitFn) => {
     }
 }
 
-export { setNumber, setLimit }
+const copy = (obj) => JSON.parse(JSON.stringify(obj))
+
+export { setNumber, setLimit, copy }

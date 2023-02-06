@@ -1,4 +1,4 @@
-import { store } from "@/core/store/store";
+import { store, setDelNode } from "@/core/store/store";
 import { ref, reactive, onMounted, nextTick } from "vue";
 import { setLimit } from '@/core/utils/utils'
 import { treeMethod } from "@/core/tree/tree";
@@ -58,6 +58,7 @@ export default function () {
         cNode.props.panels.splice(index, 1)
         nextTick(() => {
             treeMethod.delChild(store.delNode, store.delNodeParent)
+            setDelNode(null, null)
         })
     }
 

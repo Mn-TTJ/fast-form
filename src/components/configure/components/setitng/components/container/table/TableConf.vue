@@ -1,27 +1,32 @@
 <template>
     <Card label="常见属性" :col="1">
-        <template v-for="(panel, index) in panels" :key="panel.key">
+        <section><label>启用边框</label>
+            <aside><ui-switch v-model="border"></ui-switch></aside>
+        </section>
+        <section>
+            <label>限高</label>
+            <aside><ui-input v-model="height" @blur="setTableAttr(height, 'height')"
+                    @keyup.enter="setTableAttr(height, 'height')" /></aside>
+        </section>
+        <template v-for="(column, index) in columns" :key="column.prop">
+            <p>{{ column.prop }}列</p>
             <section>
-                <label>标签页</label>
-                <aside><ui-input v-model="panel.label" @blur="setLabel(index)" @keyup.enter="getLabel(index)" />
+                <label>标题</label>
+                <aside><ui-input v-model="column.label" @blur="setColumsAtrr(column.label, 'label', index)"
+                        @keyup.enter="setColumsAtrr(column.label, 'label', index)" />
                 </aside>
             </section>
-            <section><ui-button @click="delPanel(index)"><label class="del-btn">删除</label></ui-button></section>
+            <section>
+                <label>宽度</label>
+                <aside><ui-input v-model="column.width" @blur="setColumsAtrr(column.width, 'width', index)"
+                        @keyup.enter="setColumsAtrr(column.width, 'width', index)" />
+                </aside>
+            </section>
         </template>
+    </Card>
+    <Card label="数据收集" :col="1">
         <section>
-            <ui-button @click="addPanel"><label class="new-btn">新增</label></ui-button>
-        </section>
-        <section>
-            <label>高</label>
-            <aside><ui-input v-model="data.height" @blur="setAttr('height')" @keyup.enter="setAttr('height')" /></aside>
-        </section>
-        <section>
-            <label>宽</label>
-            <aside><ui-input v-model="data.width" @blur="setAttr('width')" @keyup.enter="setAttr('width')" /></aside>
-        </section>
-        <section>
-            <label>激活窗口</label>
-            <aside><ui-input v-model="data.active" @blur="setActive" @keyup.enter="setActive" /></aside>
+            <ui-button @click="dataSet"><label class="new-btn">数据设置</label></ui-button>
         </section>
     </Card>
 </template>
@@ -30,7 +35,7 @@
 import { defineExpose } from 'vue';
 import Card from '@/components/frame/card/Card.vue';
 import tableConf from './tableConf'
-const { panels, data, reSet, setAttr, setActive, setLabel, addPanel, delPanel } = tableConf()
+const { border, height, columns, reSet, setTableAttr, setColumsAtrr, dataSet } = tableConf()
 defineExpose({ reSet })
 </script>
 

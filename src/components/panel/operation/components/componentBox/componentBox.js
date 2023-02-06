@@ -1,4 +1,4 @@
-import { inject, provide, onBeforeUnmount } from 'vue'
+import { inject, provide, onBeforeUnmount, onBeforeUpdate, nextTick } from 'vue'
 import { pNodeKey, idKey } from '@/core/config/key'
 import { treeNode, treeMethod } from '@/core/tree/tree.js'
 import { setDelNode } from '@/core/store/store'
@@ -17,8 +17,12 @@ export default function (props) {
 
     onBeforeUnmount(() => {
         setDelNode(node, pNode)
-    }),
+    })
 
-        provide(pNodeKey, node)
+    onBeforeUpdate(() => {
+        if (props.reSort) nextTick(() => props.reSort(node))
+    })
+
+    provide(pNodeKey, node)
     provide(idKey, id)
 }

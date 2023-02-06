@@ -34,6 +34,21 @@ const treeMethod = {
         if (index != -1) children.splice(index, 1)
     },
 
+    reSortChild: (children, attr, sortArr) => {
+        sortArr.forEach((key, index) => {
+            for (let i = index; i < children.length; i++) {
+                if (children[i].props[attr] == key) {
+                    [children[i], children[index]] = [children[index], children[i]]
+                    break
+                }
+            }
+        })
+        while (children.length > sortArr.length) {
+            children.pop()
+        }
+        console.log(children)
+    },
+
     setParentNode: (node) => {
         parentNode = node
     },

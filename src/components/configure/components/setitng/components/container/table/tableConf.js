@@ -1,67 +1,72 @@
-import { store } from "@/core/store/store";
-import { ref, reactive, onMounted, nextTick } from "vue";
-import { setLimit } from '@/core/utils/utils'
-import { treeMethod } from "@/core/tree/tree";
+import { store, setCurtain, turnOnCurtain } from "@/core/store/store";
+import { onMounted, ref, watch, nextTick } from "vue";
+import { copy } from '@/core/utils/utils.js'
+import Coding from '@/components/curtain/components/coding/Coding.vue'
 export default function () {
-    let panels = ref([])
 
-    const data = reactive({
-        active: 0,
-        width: '100%',
-        height: 'auto'
-    })
+    const tips = `[\n\t{\n\t\t"a":{\t\\\\列属性\n\t\t\t"label":"1"\t\\\\列属性值\n\t\t},\n\t\t...其他列\n\t}\t\\\\行数据\n\t...其他行\n]\n//行数据之间保持列属性键名一致`
 
     let cNode = null
+    let tableProps = null
+    let columns = ref([])
 
-    let setActive = ref(null)
+    const border = ref(false)
+    const height = ref('auto')
+
+    const dataSet = () => {
+        setCurtain(<Coding preSet={tableProps.data} tips={tips} mode='json' callBack={editCallBack} />)
+        turnOnCurtain(true)
+    }
+
+    const editCallBack = (val) => {
+        if (val.length == 0) return
+        const keys = new Set(Object.keys(val[0]))
+        const len = keys.size
+        for (let row of val) {
+            const keyValues = Object.entries(row)
+            if (keyValues.length != len) return
+            for (let [key, value] of keyValues) {
+                if (!keys.has(key)) return
+                if (!Object.hasOwn(value, 'label')) return
+            }
+        }
+        const newColumns = new Array()
+        for (let key of keys) {
+            let flag = false
+            for (let column of columns.value) {
+                if (column.prop == key) {
+                    newColumns.push(copy(column))
+                    flag = true
+                    break
+                }
+            }
+            if (!flag) newColumns.push({
+                prop: key,
+                label: key,
+                width: 'auto'
+            })
+        }
+        tableProps.data = []
+        nextTick(() => tableProps.data = val)
+        cNode.props.columns = newColumns
+        columns.value = newColumns
+    }
+
+    const setTableAttr = (value, attr) => tableProps[attr] = value
+
+    const setColumsAtrr = (value, attr, index) => cNode.props.columns[index][attr] = value
 
     const reSet = () => {
         cNode = store.cofNode
         if (!cNode) console.log("Error,can't find the component")
-        panels.value = cNode.props.panels.map((site) => ({ label: site.label, key: site.label }))
-        data.active = cNode.props.tabs.active
-        data.width = cNode.props.tabs.width
-        data.height = cNode.props.tabs.height
-        setActive.value = setLimit(data, 'active', () => {
-            const num = parseInt(data.active)
-            if (isNaN(num)) return false
-            if (num >= panels.value.length) return false
-            cNode.props.tabs.active = num
-            return true
-        })
+        tableProps = cNode.props.table
+        columns.value = copy(cNode.props.columns)
+        border.value = tableProps.border
     }
 
-    const setLabel = (index) => {
-        if (panels.value.findIndex((currentValue, currentIndex) => {
-            return currentIndex != index && currentValue.label == panels.value[index].label
-        }) != -1) {
-            panels.value[index].label = cNode.props.panels[index].label
-            return
-        }
-        cNode.props.panels[index].label = panels.value[index].label
-        panels.value[index].key = panels.value[index].label
-    }
-
-    const setAttr = (attr) => cNode.props.tabs[attr] = data[attr]
-
-    const addPanel = () => {
-        const len = cNode.props.panels.length + 1
-        cNode.props.panels.push({
-            cName: 'ui-tabs-panel',
-            label: len + ''
-        })
-        panels.value.push({ label: len + '', key: len + '' })
-    }
-
-    const delPanel = (index) => {
-        panels.value.splice(index, 1)
-        cNode.props.panels.splice(index, 1)
-        nextTick(() => {
-            treeMethod.delChild(store.delNode, store.delNodeParent)
-        })
-    }
+    watch(border, () => tableProps.border = border)
 
     onMounted(reSet)
 
-    return { panels, data, reSet, setAttr, setActive, setLabel, addPanel, delPanel }
+    return { border, height, columns, reSet, setTableAttr, setColumsAtrr, dataSet }
 }

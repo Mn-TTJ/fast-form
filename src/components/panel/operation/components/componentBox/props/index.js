@@ -6,5 +6,6 @@ export default {
         default: 'default'
     },
     reverse: Boolean,
-    filter: Function
+    filter: Function,
+    reSort: Function
 }
