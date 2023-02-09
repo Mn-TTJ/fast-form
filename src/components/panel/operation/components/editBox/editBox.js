@@ -1,22 +1,20 @@
-import { store, setEditor } from '@/core/store/store.js'
-import { reactive, computed, onMounted, provide, inject } from 'vue'
-import { node, addNode } from '@/core/tree/tree.js'
+import { store, setEditor, setCofNode } from '@/core/store/store.js'
+import { reactive, computed, watch, onMounted, provide, inject } from 'vue'
+import { idKey } from '@/core/config/key'
 
 export default (props) => {
-    const id = Symbol()
-    provide('pid', id)
-    const pId = props.pId ? props.pId : inject('pid', null)
+    const id = props.reverse ? inject(idKey) : Symbol()
 
-    const Node = new node(true)
-    Node.vNode = props.cNode
-    Node.pointer = props.pointer
-    Node.props = props.cProps
-    addNode(id, Node, pId)
+    provide(idKey, id)
 
     const selectd = () => setEditor(id)
 
     onMounted(() => {
         selectd()
+    })
+
+    watch(() => store.editor, () => {
+        if (store.editor == id) setCofNode({ name: props.cName, props: props.cProps })
     })
 
     const o = reactive({

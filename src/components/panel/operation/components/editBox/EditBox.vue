@@ -1,5 +1,5 @@
 <template>
-    <div :class=o @click.stop="selectd">
+    <div :class=o @click.stop="selectd" @drop.prevent.stop>
         <slot></slot>
         <div :class=s>
             <label>&#xe605;</label>

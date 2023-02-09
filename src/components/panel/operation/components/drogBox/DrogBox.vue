@@ -1,5 +1,6 @@
 <template>
     <div :class="o" droppable="true" @dragover.prevent.stop="dragOverEvent" @drop.prevent.stop="dropEvent">
+        <slot></slot>
     </div>
 </template>
 

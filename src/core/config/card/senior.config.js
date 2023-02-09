@@ -1,18 +1,19 @@
 export default [
     {
-        label: '图片',
-        icon: '&#xe889;'
-    }, {
         label: '文件',
-        icon: '&#xeb4f;'
+        icon: '&#xeb4f;',
+        name: 'upload'
     }, {
-        label: '富文本',
-        icon: '&#xe66f;'
+        label: '补全输入',
+        icon: '&#xe63b;',
+        name: 'autocompelete'
     }, {
-        label: '级联选择',
-        icon: '&#xe695;'
+        label: '下拉选项',
+        icon: '&#xe62e;',
+        name: 'select'
     }, {
-        label: '插槽',
-        icon: '&#xe61f;'
+        label: '提示',
+        icon: '&#xe653;',
+        name: 'tips'
     }
 ]

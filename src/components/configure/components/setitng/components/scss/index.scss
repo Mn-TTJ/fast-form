@@ -1,0 +1,32 @@
+section {
+    display: flex;
+    align-items: center;
+    font-size: 0.9rem;
+    overflow: hidden;
+
+    &>label {
+        flex: 4;
+    }
+
+    &>aside {
+        flex: 6;
+    }
+}
+
+p {
+    color: darkcyan;
+}
+
+.new-btn,
+.del-btn {
+    display: inline-block;
+    width: 13.2rem;
+}
+
+.new-btn {
+    color: darkcyan;
+}
+
+.del-btn {
+    color: red;
+}

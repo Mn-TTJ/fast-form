@@ -4,29 +4,30 @@ export default [
         icon: "&#xe608;",
         name: 'grid'
     }, {
-        label: '表格',
-        icon: '&#xe63e;'
-    }, {
         label: '标签页',
-        icon: '&#xe644;'
-    }, {
-        label: '单行子表单',
-        icon: '&#xe6f4;'
-    }, {
-        label: '多行子表单',
-        icon: '&#xeb94;'
+        icon: '&#xe644;',
+        name: 'tabs'
     }, {
         label: '数据表格',
-        icon: '&#xe641;'
+        icon: '&#xe641;',
+        name: 'table'
     }, {
         label: '弹出窗口',
-        icon: '&#xe664;'
+        icon: '&#xe664;',
+        name: 'dialog'
     }, {
         label: '侧滑抽屉',
-        icon: '&#xe7de;'
+        icon: '&#xe7de;',
+        name: 'drawer'
     }, {
         label: '卡片',
-        icon: '&#xe674;'
+        icon: '&#xe674;',
+        name: 'flodCard'
     },
+    {
+        label: '盒子',
+        icon: '&#xebb6;',
+        name: 'box'
+    }
 ]
 

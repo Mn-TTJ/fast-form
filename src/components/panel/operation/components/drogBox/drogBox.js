@@ -1,31 +1,35 @@
 import { slots } from '@/core/slots/index.js'
 import { store, setdroger } from '@/core/store/store.js'
-import { render, reactive, computed, provide, inject } from 'vue'
-import { node, addNode } from '@/core/tree/tree.js'
+import { render, reactive, computed, inject } from 'vue'
+import { treeMethod } from '@/core/tree/tree.js'
+import { pNodeKey } from '@/core/config/key'
 
 export default (props) => {
+
     const id = Symbol()
-    provide('pid', id)
 
-    const pId = inject('pid', null)
+    const pNode = inject(pNodeKey, null)
 
-    const Node = new node(false)
-    addNode(id, Node, pId, -1)
-
-    const dragOverEvent = () => setdroger(id)
+    const dragOverEvent = () => {
+        if (props.disabled) return
+        setdroger(id)
+    }
 
     const o = reactive({
         'drogBox': true,
         'dragBorder': computed(() => props.border),
         'dragOver': computed(() => store.droger == id),
+        'drog-disabled': computed(() => props.disabled)
     })
 
     const dropEvent = (event) => {
+        if (props.disabled) return
+        treeMethod.setParentNode(pNode)
         const root = event.target
         const name = event.dataTransfer.getData('drag')
         const slot = slots.get(name)
         const target = document.createElement('div')
-        render(slot(id), target)
+        render(slot(), target)
         root.appendChild(target)
     }
 
