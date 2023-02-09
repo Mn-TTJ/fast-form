@@ -4,7 +4,7 @@ import EditBox from '@/components/panel/operation/components/editBox/EditBox.vue
 import ComponentBox from "@/components/panel/operation/components/componentBox/componentBox.vue"
 
 export default (slots, name) => {
-    const uiTextarea = resolveComponent('ui-textarea')
+    const uiAutocompelete = resolveComponent('ui-autocompelete')
     const uiBox = resolveComponent('ui-box')
 
     slots.set(name, (cProps) => {
@@ -17,15 +17,12 @@ export default (slots, name) => {
                 padding: '0.1rem',
                 margin: '0rem'
             },
-            textarea: {
+            autocompelete: {
                 name: '',
                 disabled: false,
                 parser: '输入',
-                max: 200,
-                min: 0,
-                minRow: 0,
-                maxRow: 10,
-                resizable: false
+                clearable: false,
+                tips: ['hello', 'world'],
             }
         })
 
@@ -33,9 +30,9 @@ export default (slots, name) => {
             <ComponentBox cName='ui-box' cProps={cProps.box}>
                 <uiBox {...cProps.box}>
                     <DrogBox disabled>
-                        <EditBox cProps={cProps.input} cName={'textarea'}>
-                            <ComponentBox cName='ui-textarea' cProps={cProps.textarea}>
-                                <uiTextarea {...cProps.textarea} />
+                        <EditBox cProps={cProps.autocompelete} cName={'autocompelete'}>
+                            <ComponentBox cName='ui-autocompelete' cProps={cProps.autocompelete}>
+                                <uiAutocompelete  {...cProps.autocompelete} />
                             </ComponentBox>
                         </EditBox>
                     </DrogBox>

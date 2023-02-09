@@ -24,5 +24,10 @@ export default [
         icon: '&#xe674;',
         name: 'flodCard'
     },
+    {
+        label: '盒子',
+        icon: '&#xebb6;',
+        name: 'box'
+    }
 ]
 

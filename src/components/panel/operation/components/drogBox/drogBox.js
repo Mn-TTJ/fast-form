@@ -10,15 +10,20 @@ export default (props) => {
 
     const pNode = inject(pNodeKey, null)
 
-    const dragOverEvent = () => setdroger(id)
+    const dragOverEvent = () => {
+        if (props.disabled) return
+        setdroger(id)
+    }
 
     const o = reactive({
         'drogBox': true,
         'dragBorder': computed(() => props.border),
         'dragOver': computed(() => store.droger == id),
+        'drog-disabled': computed(() => props.disabled)
     })
 
     const dropEvent = (event) => {
+        if (props.disabled) return
         treeMethod.setParentNode(pNode)
         const root = event.target
         const name = event.dataTransfer.getData('drag')

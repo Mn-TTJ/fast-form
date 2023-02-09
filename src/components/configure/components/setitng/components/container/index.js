@@ -5,6 +5,7 @@ import TableConf from './table/TableConf.vue'
 import DialogConf from './dialog/DialogConf.vue'
 import DrawerConf from './drawer/DrawerConf.vue'
 import CardConf from './flodCard/FlodCardConf.vue'
+import BoxConf from './box/BoxConf.vue'
 
 export default [
     ['grid-row', RowConf],
@@ -13,6 +14,7 @@ export default [
     ['table', TableConf],
     ['dialog', DialogConf],
     ['drawer', DrawerConf],
-    ['card', CardConf]
+    ['card', CardConf],
+    ['box', BoxConf]
 ]
 

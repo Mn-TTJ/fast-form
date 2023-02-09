@@ -1,10 +1,10 @@
-import { resolveComponent, reactive } from "vue"
+import { resolveComponent, reactive, ref } from "vue"
 import DrogBox from '@/components/panel/operation/components/drogBox/DrogBox.vue'
 import EditBox from '@/components/panel/operation/components/editBox/EditBox.vue'
 import ComponentBox from "@/components/panel/operation/components/componentBox/componentBox.vue"
 
 export default (slots, name) => {
-    const uiTextarea = resolveComponent('ui-textarea')
+    const uiSelect = resolveComponent('ui-select')
     const uiBox = resolveComponent('ui-box')
 
     slots.set(name, (cProps) => {
@@ -17,25 +17,25 @@ export default (slots, name) => {
                 padding: '0.1rem',
                 margin: '0rem'
             },
-            textarea: {
+            select: {
                 name: '',
                 disabled: false,
-                parser: '输入',
-                max: 200,
-                min: 0,
-                minRow: 0,
-                maxRow: 10,
-                resizable: false
+                dataSet: [{ value: '标签1', hasChild: false, children: [] }, { value: '标签2', hasChild: false, children: [] }, { value: '标签3', hasChild: true, children: [{ value: '标签4', hasChild: false, children: [] }, { value: '标签5', hasChild: false, children: [] }] }],
+                multiple: true,
+                lazy: false,
+                callBack: null,
             }
         })
+
+        const value = ref(null)
 
         return <EditBox cProps={cProps.box} cName={'box'}>
             <ComponentBox cName='ui-box' cProps={cProps.box}>
                 <uiBox {...cProps.box}>
                     <DrogBox disabled>
-                        <EditBox cProps={cProps.input} cName={'textarea'}>
-                            <ComponentBox cName='ui-textarea' cProps={cProps.textarea}>
-                                <uiTextarea {...cProps.textarea} />
+                        <EditBox cProps={cProps.select} cName={'select'}>
+                            <ComponentBox cName='ui-select' cProps={cProps.select}>
+                                <uiSelect v-model={value.value}  {...cProps.select} />
                             </ComponentBox>
                         </EditBox>
                     </DrogBox>

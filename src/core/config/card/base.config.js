@@ -9,51 +9,55 @@ export default [
         name: 'textarea'
     }, {
         label: '计数器',
-        icon: '&#xe7f3;'
+        icon: '&#xe7f3;',
+        name: 'counter'
     }, {
         label: '单选项',
-        icon: '&#xe71f;'
+        icon: '&#xe71f;',
+        name: 'radio'
     }, {
         label: '多选项',
-        icon: '&#xeb5f;'
-    }, {
-        label: '下拉选项',
-        icon: '&#xe62e;'
+        icon: '&#xeb5f;',
+        name: 'checkbox'
     }, {
         label: '时间',
-        icon: '&#xe64d;'
+        icon: '&#xe64d;',
+        name: 'timepicker'
     }, {
         label: '时间范围',
-        icon: '&#xe602;'
+        icon: '&#xe602;',
+        name: 'timeRange'
     }, {
         label: '日期',
-        icon: '&#xe660;'
+        icon: '&#xe660;',
+        name: 'datepicker'
     }, {
         label: '日期范围',
-        icon: '&#xeb3f;'
+        icon: '&#xeb3f;',
+        name: 'dateRange'
     }, {
         label: '开关',
-        icon: '&#xeb98;'
-    }, {
-        label: '评分',
-        icon: '&#xe69d;'
+        icon: '&#xeb98;',
+        name: 'switch'
     }, {
         label: '颜色选择器',
-        icon: '&#xe67e;'
-    }, {
-        label: '滑块',
-        icon: '&#xe606;'
+        icon: '&#xe67e;',
+        name: 'colorpicker'
     }, {
         label: '静态文字',
-        icon: '&#xe611;'
+        icon: '&#xe611;',
+        name: 'text'
     }, {
         label: 'html',
-        icon: '&#xe7ae;'
+        icon: '&#xe7ae;',
+        name: 'code'
     }, {
         label: '按钮',
-        icon: '&#xeb95;'
+        icon: '&#xeb95;',
+        name: 'button'
     }, {
         label: '分割线',
-        icon: '&#xe646;'
+        icon: '&#xe646;',
+        name: 'line'
     },
 ]

@@ -4,7 +4,7 @@ import EditBox from '@/components/panel/operation/components/editBox/EditBox.vue
 import ComponentBox from "@/components/panel/operation/components/componentBox/componentBox.vue"
 
 export default (slots, name) => {
-    const uiTextarea = resolveComponent('ui-textarea')
+    const uiText = resolveComponent('ui-text')
     const uiBox = resolveComponent('ui-box')
 
     slots.set(name, (cProps) => {
@@ -17,15 +17,16 @@ export default (slots, name) => {
                 padding: '0.1rem',
                 margin: '0rem'
             },
-            textarea: {
-                name: '',
-                disabled: false,
-                parser: '输入',
-                max: 200,
-                min: 0,
-                minRow: 0,
-                maxRow: 10,
-                resizable: false
+            text: {
+                text: 'text',
+                row: 100,
+                ellipsis: false,
+                fontSize: '1rem',
+                fontWeight: '400',
+                color: '#2c3e50',
+                align: 'center',
+                pre: true,
+                wrap: true
             }
         })
 
@@ -33,9 +34,9 @@ export default (slots, name) => {
             <ComponentBox cName='ui-box' cProps={cProps.box}>
                 <uiBox {...cProps.box}>
                     <DrogBox disabled>
-                        <EditBox cProps={cProps.input} cName={'textarea'}>
-                            <ComponentBox cName='ui-textarea' cProps={cProps.textarea}>
-                                <uiTextarea {...cProps.textarea} />
+                        <EditBox cProps={cProps.text} cName={'text'}>
+                            <ComponentBox cName='ui-text' cProps={cProps.text}>
+                                <uiText  {...cProps.text} />
                             </ComponentBox>
                         </EditBox>
                     </DrogBox>
