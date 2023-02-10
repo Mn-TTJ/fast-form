@@ -30,3 +30,17 @@ p {
 .del-btn {
     color: red;
 }
+
+.radio-btn {
+    display: block;
+
+    .radio-new-btn {
+        width: 100%;
+        color: darkcyan;
+    }
+
+    .radio-del-btn {
+        width: 100%;
+        color: red;
+    }
+}

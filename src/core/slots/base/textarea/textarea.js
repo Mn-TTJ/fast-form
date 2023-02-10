@@ -33,7 +33,7 @@ export default (slots, name) => {
             <ComponentBox cName='ui-box' cProps={cProps.box}>
                 <uiBox {...cProps.box}>
                     <DrogBox disabled>
-                        <EditBox cProps={cProps.input} cName={'textarea'}>
+                        <EditBox cProps={cProps.textarea} cName={'textarea'}>
                             <ComponentBox cName='ui-textarea' cProps={cProps.textarea}>
                                 <uiTextarea {...cProps.textarea} />
                             </ComponentBox>

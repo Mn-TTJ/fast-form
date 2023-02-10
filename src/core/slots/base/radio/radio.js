@@ -21,7 +21,7 @@ export default (slots, name) => {
                 name: '',
                 disabled: false,
                 labels: ['标签1', '标签2', '标签3'],
-                values: [1, 2, 3],
+                values: ['1', '2', '3'],
                 group: Math.floor(Math.random() * 10000) + '',
                 circular: false,
                 tick: false,

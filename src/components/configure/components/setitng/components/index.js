@@ -1,3 +1,4 @@
-import container from './container/index'
+import container from './container'
+import base from './base'
 
-export default [...container]
+export default [...container, ...base]
