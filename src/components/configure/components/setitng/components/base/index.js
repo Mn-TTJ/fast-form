@@ -9,6 +9,10 @@ import datePickerConf from './datePicker/datePickerConf.vue'
 import dateRangeConf from './dateRange/dateRangeConf.vue'
 import uSwitchConf from './uSwitch/uSwitchConf.vue'
 import colorPickerConf from './colorPicker/colorPickerConf.vue'
+import textConf from './text/textConf.vue'
+import codeConf from './code/codeConf.vue'
+import buttonConf from './button/buttonConf.vue'
+import lineConf from './line/lineConf.vue'
 
 export default [
     ['input', inputConf],
@@ -21,6 +25,10 @@ export default [
     ['datepicker', datePickerConf],
     ['dateRange', dateRangeConf],
     ['switch', uSwitchConf],
-    ['colorpicker', colorPickerConf]
+    ['colorpicker', colorPickerConf],
+    ['text', textConf],
+    ['code', codeConf],
+    ['button', buttonConf],
+    ['line', lineConf]
 ]
 

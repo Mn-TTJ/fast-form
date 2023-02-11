@@ -46,7 +46,6 @@ const treeMethod = {
         while (children.length > sortArr.length) {
             children.pop()
         }
-        console.log(children)
     },
 
     setParentNode: (node) => {

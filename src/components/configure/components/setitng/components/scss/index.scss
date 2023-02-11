@@ -44,3 +44,11 @@ p {
         color: red;
     }
 }
+
+.tips {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}

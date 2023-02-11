@@ -14,7 +14,7 @@ export default function () {
     const height = ref('auto')
 
     const dataSet = () => {
-        setCurtain(<Coding preSet={tableProps.data} tips={tips} mode='json' callBack={editCallBack} />)
+        setCurtain(<Coding json preSet={tableProps.data} tips={tips} mode='json' callBack={editCallBack} />)
         turnOnCurtain(true)
     }
 
@@ -50,6 +50,7 @@ export default function () {
         nextTick(() => tableProps.data = val)
         cNode.props.columns = newColumns
         columns.value = newColumns
+        turnOnCurtain(false)
     }
 
     const setTableAttr = (value, attr) => tableProps[attr] = value
