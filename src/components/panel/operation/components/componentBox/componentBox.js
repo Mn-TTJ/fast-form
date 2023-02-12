@@ -1,5 +1,5 @@
-import { inject, provide, onBeforeUnmount, onBeforeUpdate, nextTick } from 'vue'
-import { pNodeKey, idKey } from '@/core/config/key'
+import { inject, provide, onMounted, onBeforeUnmount, onBeforeUpdate, nextTick } from 'vue'
+import { pNodeKey, idKey, editerKey, componentKey } from '@/core/config/key'
 import { treeNode, treeMethod } from '@/core/tree/tree.js'
 import { setDelNode } from '@/core/store/store'
 export default function (props) {
@@ -14,6 +14,18 @@ export default function (props) {
 
     const node = new treeNode(id, props.cName, props.cProps)
     treeMethod.pushNode(node, pNode, props.cSlot)
+    const getVNode = () => node
+
+    if (props.reverse && !props.disEidt) {
+        provide(componentKey, getVNode)
+    }
+
+    onMounted(() => {
+        if (!props.reverse && !props.disEidt) {
+            const setVNode = inject(editerKey)
+            setVNode(node)
+        }
+    })
 
     onBeforeUnmount(() => {
         setDelNode(node, pNode)

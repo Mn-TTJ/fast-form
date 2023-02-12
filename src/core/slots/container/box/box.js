@@ -12,7 +12,7 @@ export default (slots, name) => {
                 flex: false,
                 width: '100%',
                 height: 'auto',
-                color: 'white',
+                color: '#ffffff',
                 padding: '0rem',
                 margin: '0rem'
             }

@@ -59,7 +59,7 @@ export default (slots, name) => {
             <ComponentBox cName='ui-table' cProps={cProps.table} reSort={reSort} key={cProps.key}>
                 <uiTable {...cProps.table}>
                     {cProps.columns.map((column) => {
-                        return <ComponentBox cName='ui-table-column' filter={filter} cProps={column} key={column.prop}>
+                        return <ComponentBox cName='ui-table-column' filter={filter} cProps={column} key={column.prop} disEidt>
                             <uiTColumn {...column}></uiTColumn>
                         </ComponentBox>
                     })}

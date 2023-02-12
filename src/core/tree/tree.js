@@ -4,7 +4,8 @@ const treeNode = function (id, vNode, props) {
     this.props = props
     this.slots = {
         default: []
-    }
+    },
+        this.parent = null
 }
 
 let parentNode = null
@@ -17,12 +18,17 @@ const treeMethod = {
         else {
             if (!parent.slots[slot]) parent.slots[slot] = new Array()
             parent.slots[slot].push(vNode)
+            vNode.parent = parent
         }
     },
 
     addNode: (vNode, parent, slot, index) => {
-        if (!parent.slots[slot]) parent.slots[slot] = new Array()
-        parent.slots[slot].splice(index, 0, vNode)
+        if (!parent) tree.push(vNode)
+        else {
+            if (!parent.slots[slot]) parent.slots[slot] = new Array()
+            parent.slots[slot].splice(index, 0, vNode)
+            vNode.parent = parent
+        }
     },
 
     delChild: (node, parent, slot = 'default') => {
@@ -32,6 +38,7 @@ const treeMethod = {
             return false
         })
         if (index != -1) children.splice(index, 1)
+        node.parent = null
     },
 
     reSortChild: (children, attr, sortArr) => {
@@ -70,7 +77,9 @@ const treeMethod = {
         flat(tree, componentTree)
 
         return componentTree
-    }
+    },
+
+    toJson: () => JSON.stringify(tree, null, 4)
 }
 
 export { treeNode, treeMethod }
