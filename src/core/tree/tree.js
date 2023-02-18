@@ -4,8 +4,10 @@ const treeNode = function (id, vNode, props) {
     this.props = props
     this.slots = {
         default: []
-    },
-        this.parent = null
+    }
+    this.parent = null
+    this.reBuild = null
+    this.clear = null
 }
 
 let parentNode = null
@@ -22,14 +24,15 @@ const treeMethod = {
         }
     },
 
-    addNode: (vNode, parent, slot, index) => {
-        if (!parent) tree.push(vNode)
-        else {
-            if (!parent.slots[slot]) parent.slots[slot] = new Array()
-            parent.slots[slot].splice(index, 0, vNode)
-            vNode.parent = parent
-        }
-    },
+    // addNode: (vNode, parent, slot, index) => {
+    //     if (!parent) tree.push(vNode)
+    //     else {
+    //         if (!parent.slots[slot]) parent.slots[slot] = new Array()
+    //         parent.slots[slot].splice(index, 0, vNode)
+    //         vNode.parent = parent
+    //     }
+    //     vNode.reBuild = reBuild
+    // },
 
     delChild: (node, parent, slot = 'default') => {
         const children = parent ? parent.slots[slot] : tree
@@ -39,6 +42,19 @@ const treeMethod = {
         })
         if (index != -1) children.splice(index, 1)
         node.parent = null
+    },
+
+    clearChildren: (parent) => {
+        if (!parent) {
+            while (tree.length > 0) {
+                tree.pop()
+            }
+        }
+        else {
+            while (parent.slots.default.length != 0) {
+                parent.slots.default.pop()
+            }
+        }
     },
 
     reSortChild: (children, attr, sortArr) => {
@@ -79,8 +95,13 @@ const treeMethod = {
         return componentTree
     },
 
-    toJson: () => JSON.stringify(tree, null, 4)
+    toJson: () => JSON.stringify(tree, (key, value) => {
+        if (key == 'id' || key == 'parent' || key == 'reBuild' || key == 'clear') return undefined
+        return value
+    }, 4),
+
+    getTree: () => tree
 }
 
-export { treeNode, treeMethod }
+export { treeNode, treeMethod, tree }
 

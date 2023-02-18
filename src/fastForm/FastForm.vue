@@ -12,11 +12,9 @@
         <template #operation>
             <Operation></Operation>
         </template>
-        <template #coding>
-            <Coding></Coding>
-        </template>
     </Structure>
     <Curtain></Curtain>
+    <ui-tips ref="tips"></ui-tips>
 </template>
   
 <script setup>
@@ -25,6 +23,9 @@ import Library from '@/components/library/Library.vue';
 import Configure from '../components/configure/Configure.vue';
 import Options from '../components/options/Options.vue';
 import Operation from '@/components/panel/operation/Operation.vue';
-import Coding from '@/components/panel/coding/Coding.vue';
 import Curtain from '../components/curtain/Curtain.vue';
+import fastForm from './fastForm'
+import { ref } from 'vue';
+const tips = ref(null)
+fastForm(tips)
 </script>

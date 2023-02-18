@@ -26,4 +26,12 @@ const setLimit = (target, attr, limitFn) => {
 
 const copy = (obj) => JSON.parse(JSON.stringify(obj))
 
-export { setNumber, setLimit, copy }
+const isDOM = (typeof HTMLElement === 'object') ?
+    function (obj) {
+        return obj instanceof HTMLElement;
+    } :
+    function (obj) {
+        return obj && typeof obj === 'object' && obj.nodeType === 1 && typeof obj.nodeName === 'string';
+    }
+
+export { setNumber, setLimit, copy, isDOM }

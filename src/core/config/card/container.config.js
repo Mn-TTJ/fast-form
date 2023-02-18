@@ -22,7 +22,7 @@ export default [
     }, {
         label: '卡片',
         icon: '&#xe674;',
-        name: 'flodCard'
+        name: 'card'
     },
     {
         label: '盒子',

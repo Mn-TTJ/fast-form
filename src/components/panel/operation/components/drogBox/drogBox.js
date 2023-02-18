@@ -1,10 +1,11 @@
 import { slots } from '@/core/slots/index.js'
-import { store, setdroger } from '@/core/store/store.js'
+import { store, setdroger, setRoot } from '@/core/store/store.js'
 import { render, reactive, computed, inject } from 'vue'
 import { treeMethod } from '@/core/tree/tree.js'
-import { pNodeKey } from '@/core/config/key'
+import { pNodeKey, reBuidKey } from '@/core/config/key'
+import { isDOM } from '@/core/utils/utils'
 
-export default (props) => {
+export default (props, drogContainer) => {
 
     const id = Symbol()
 
@@ -21,6 +22,26 @@ export default (props) => {
         'dragOver': computed(() => store.droger == id),
         'drog-disabled': computed(() => props.disabled)
     })
+
+    const clearNode = () => {
+        while (drogContainer.value.firstChild) {
+            if (isDOM(drogContainer.value.firstChild)) render(null, drogContainer.value.firstChild)
+            drogContainer.value.firstChild.remove()
+        }
+    }
+
+    const reBuild = (name, props) => {
+        treeMethod.setParentNode(pNode)
+        const slot = slots.get(name)
+        const target = document.createElement('div')
+        render(slot(reactive(props)), target)
+        drogContainer.value.appendChild(target)
+    }
+
+    const setReBuild = inject(reBuidKey, null)
+
+    if (!setReBuild) setRoot(reBuild, clearNode)
+    else setReBuild(reBuild, clearNode)
 
     const dropEvent = (event) => {
         if (props.disabled) return

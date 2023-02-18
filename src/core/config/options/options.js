@@ -1,6 +1,8 @@
 import Preview from '@/components/curtain/components/preview/Preview.vue'
 import JsonEXport from '@/components/curtain/components/jsonExport/JsonExport.vue'
+import JsonImport from '../../../components/curtain/components/jsonImport/JsonImport.vue'
 import { turnOnCurtain, setCurtain } from '@/core/store/store.js'
+import { clear } from '@/core/slots'
 
 const openCurtain = (curtain) => {
     return () => {
@@ -12,13 +14,13 @@ const openCurtain = (curtain) => {
 export default [
     {
         label: '&#xe645;清空',
-        event: null
+        event: clear,
     }, {
         label: '&#xe6a2;预览',
         event: openCurtain(Preview)
     }, {
         label: '导入JSON',
-        event: null
+        event: openCurtain(JsonImport)
     }, {
         label: '导出JSON',
         event: openCurtain(JsonEXport)
