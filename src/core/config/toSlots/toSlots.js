@@ -45,6 +45,8 @@ const Form = new Set([
     'autocompelete',
     'select'])
 
+export const toSlot = (name) => Slots.get(name)
+
 export const isForm = (slot) => Form.has(slot)
 
 export const toSlots = (vNodes) => {

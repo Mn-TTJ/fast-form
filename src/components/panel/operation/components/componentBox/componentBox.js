@@ -16,7 +16,7 @@ export default function (props) {
     treeMethod.pushNode(node, pNode, props.cSlot)
     const getVNode = () => node
 
-    const setReBuild = (reBuild, clear) => { node.reBuild = reBuild, node.clear = clear }
+    const setReBuild = (reBuild, clear, flip) => { node.reBuild = reBuild, node.clear = clear, node.flip = flip }
     provide(reBuidKey, setReBuild)
 
     if (props.reverse && !props.disEidt) {

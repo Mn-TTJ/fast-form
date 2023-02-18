@@ -1,0 +1,17 @@
+.global {
+    display: flex;
+    padding: 0.5rem;
+    height: 100%;
+    flex-direction: column;
+    justify-content: center;
+}
+
+button {
+    display: block;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    border: none;
+    border-radius: 0.1rem;
+    color: darkcyan;
+    cursor: pointer;
+}

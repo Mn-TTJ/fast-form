@@ -1,7 +1,7 @@
 import { reactive, shallowRef } from "vue"
 
 const store = reactive({
-    editor: Symbol(),
+    editor: null,
     droger: Symbol(),
     cofNode: null,
     curtainSwicth: false,
@@ -12,7 +12,9 @@ const store = reactive({
     nextStack: new Array(),
     rootReBuild: null,
     rootClear: null,
-    tips: null
+    rootFilp: null,
+    tips: null,
+    form: false
 })
 
 const setEditor = (editor) => store.editor = editor
@@ -32,7 +34,9 @@ const turnOnCurtain = (flag) => {
     if (!flag) store.curtainComponent = null
 }
 
-const setRoot = (rootReBuild, rootClear) => { store.rootReBuild = rootReBuild, store.rootClear = rootClear }
+const setRoot = (rootReBuild, rootClear, rootFilp) => { store.rootReBuild = rootReBuild, store.rootClear = rootClear, store.rootFilp = rootFilp }
+
+const setForm = () => store.form = !store.form
 
 const setPastStack = (past) => {
     store.nextStack = []
@@ -64,4 +68,4 @@ const toPackStack = () => {
 }
 const historyStack = { setPastStack, toNextStack, toPackStack }
 
-export { store, setEditor, setdroger, turnOnCurtain, setCurtain, setCofNode, setDelNode, setRoot, setTips, historyStack }
+export { store, setEditor, setdroger, turnOnCurtain, setCurtain, setCofNode, setDelNode, setRoot, setTips, setForm, historyStack }

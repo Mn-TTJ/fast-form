@@ -30,6 +30,14 @@ export default (props, drogContainer) => {
         }
     }
 
+    const flipNode = (index) => {
+        const children = drogContainer.value.children
+        let pre = children[index - 1]
+        let next = children[index]
+        drogContainer.value.removeChild(next)
+        drogContainer.value.insertBefore(next, pre)
+    }
+
     const reBuild = (name, props) => {
         treeMethod.setParentNode(pNode)
         const slot = slots.get(name)
@@ -40,8 +48,8 @@ export default (props, drogContainer) => {
 
     const setReBuild = inject(reBuidKey, null)
 
-    if (!setReBuild) setRoot(reBuild, clearNode)
-    else setReBuild(reBuild, clearNode)
+    if (!setReBuild) setRoot(reBuild, clearNode, flipNode)
+    else setReBuild(reBuild, clearNode, flipNode)
 
     const dropEvent = (event) => {
         if (props.disabled) return
