@@ -15,13 +15,15 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             timepicker: {
                 name: '',
                 disabled: false,
                 min: '00:00:00',
-                max: '23:59:59'
+                max: '23:59:59',
+                class: []
             }
         })
 

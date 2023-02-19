@@ -2,8 +2,7 @@
     <Card label="常见属性" :col="1">
         <section>
             <label>高</label>
-            <aside><ui-input v-model="height" @blur="setAttr(height, 'height')"
-                    @keyup.enter="setAttr(height, 'height')" />
+            <aside><ui-input v-model="height" @blur="setAttr(height, 'height')" @keyup.enter="setAttr(height, 'height')" />
             </aside>
         </section>
         <section>
@@ -19,8 +18,7 @@
         </section>
         <section>
             <label>外边距</label>
-            <aside><ui-input v-model="margin" @blur="setAttr(margin, 'margin')"
-                    @keyup.enter="setAttr(margin, 'margin')" />
+            <aside><ui-input v-model="margin" @blur="setAttr(margin, 'margin')" @keyup.enter="setAttr(margin, 'margin')" />
             </aside>
         </section>
         <section>
@@ -34,10 +32,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="box.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import boxConf from './boxConf'
 import { defineExpose } from 'vue';
 const { box, height, width, margin, padding, reSet, setAttr } = boxConf()

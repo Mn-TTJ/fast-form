@@ -17,10 +17,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="datePicker.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import datePickerConf from './datePickerConf.js'
 import { defineExpose } from 'vue';
 const { datePicker, name, reSet, setAttr } = datePickerConf()

@@ -17,10 +17,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="dateRange.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import dateRangeConf from './dateRangeConf.js'
 import { defineExpose } from 'vue';
 const { dateRange, name, reSet, setAttr } = dateRangeConf()

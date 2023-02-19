@@ -29,10 +29,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="counter.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import counterConf from './counterConf.js'
 import { defineExpose } from 'vue';
 const { counter, name, skip, reSet, setAttr, setSkip } = counterConf()

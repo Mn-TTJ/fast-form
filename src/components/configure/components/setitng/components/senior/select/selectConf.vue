@@ -21,10 +21,12 @@
             <ui-button @click="dataSet"><label class="new-btn">数据设置</label></ui-button>
         </section>
     </Card>
+    <class-name v-model="select.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import selectConf from './selectConf.js'
 import { defineExpose } from 'vue';
 const { select, name, reSet, setAttr, dataSet } = selectConf()

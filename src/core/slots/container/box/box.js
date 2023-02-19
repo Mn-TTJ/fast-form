@@ -14,7 +14,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             }
         })
 

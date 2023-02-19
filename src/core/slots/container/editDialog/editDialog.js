@@ -15,7 +15,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 panelOnly: false,
-                shadow: false
+                shadow: false,
+                class: []
             }
         })
 

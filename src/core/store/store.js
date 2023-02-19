@@ -14,7 +14,8 @@ const store = reactive({
     rootClear: null,
     rootFilp: null,
     tips: null,
-    form: false
+    form: false,
+    classSet: []
 })
 
 const setEditor = (editor) => store.editor = editor
@@ -68,4 +69,6 @@ const toPackStack = () => {
 }
 const historyStack = { setPastStack, toNextStack, toPackStack }
 
-export { store, setEditor, setdroger, turnOnCurtain, setCurtain, setCofNode, setDelNode, setRoot, setTips, setForm, historyStack }
+const setClass = (classSet) => store.classSet = classSet
+
+export { store, setEditor, setdroger, turnOnCurtain, setCurtain, setCofNode, setDelNode, setRoot, setTips, setForm, setClass, historyStack }

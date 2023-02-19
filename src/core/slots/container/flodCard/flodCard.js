@@ -16,7 +16,8 @@ export default (slots, name) => {
                 hColor: '#ffffff',
                 bColor: '#ffffff',
                 left: false,
-                shadow: 'auto'
+                shadow: 'auto',
+                class: []
             }
         })
 

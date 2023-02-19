@@ -29,13 +29,15 @@
             <ui-button @click="dataSet"><label class="new-btn">数据设置</label></ui-button>
         </section>
     </Card>
+    <class-name v-model="table.class"></class-name>
 </template>
 
 <script setup>
 import { defineExpose } from 'vue';
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import tableConf from './tableConf'
-const { border, height, columns, reSet, setTableAttr, setColumsAtrr, dataSet } = tableConf()
+const { table, border, height, columns, reSet, setTableAttr, setColumsAtrr, dataSet } = tableConf()
 defineExpose({ reSet })
 </script>
 

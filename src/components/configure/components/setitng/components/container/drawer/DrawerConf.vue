@@ -17,10 +17,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="drawer.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import drawerConf from './drawerConf'
 import { defineExpose } from 'vue';
 const { drawer, altitude, direction, reSet, setAttr } = drawerConf()

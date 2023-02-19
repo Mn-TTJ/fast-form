@@ -13,18 +13,22 @@ export default (slots, name) => {
             tabs: {
                 active: 0,
                 height: 'auto',
-                width: '100%'
+                width: '100%',
+                class: []
             },
             panels: [
                 {
-                    cName: 'ui-tabs-panel',
-                    label: '1'
+                    cName: 'ui-tab-panel',
+                    label: '1',
+                    class: []
                 }, {
-                    cName: 'ui-tabs-panel',
-                    label: '2'
+                    cName: 'ui-tab-panel',
+                    label: '2',
+                    class: []
                 }, {
-                    cName: 'ui-tabs-panel',
-                    label: '3'
+                    cName: 'ui-tab-panel',
+                    label: '3',
+                    class: []
                 }
             ]
         })

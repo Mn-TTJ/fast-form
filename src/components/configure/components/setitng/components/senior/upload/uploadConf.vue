@@ -12,8 +12,7 @@
         </section>
         <section>
             <label>类型</label>
-            <aside><ui-input v-model="accept" @blur="setAttr(accept, 'accept')"
-                    @keyup.enter="setAttr(accept, 'accept')" />
+            <aside><ui-input v-model="accept" @blur="setAttr(accept, 'accept')" @keyup.enter="setAttr(accept, 'accept')" />
             </aside>
         </section>
         <section>
@@ -42,10 +41,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="upload.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import uploadConf from './uploadConf.js'
 import { defineExpose } from 'vue';
 const { upload, name, text, accept, max, reSet, setAttr, setMax } = uploadConf()

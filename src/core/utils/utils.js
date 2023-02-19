@@ -34,4 +34,12 @@ const isDOM = (typeof HTMLElement === 'object') ?
         return obj && typeof obj === 'object' && obj.nodeType === 1 && typeof obj.nodeName === 'string';
     }
 
-export { setNumber, setLimit, copy, isDOM }
+
+const getClassSet = (str) => {
+    const patte = /\.{1}[0-9a-zA-Z]+/g
+    let set = str.replace(/[\r\n]/g, "").replace(/\s+/g, "").match(patte)
+    set = set ? set : []
+    set = set.map(x => x.slice(1))
+    return Array.from(new Set(set))
+}
+export { setNumber, setLimit, copy, isDOM, getClassSet }

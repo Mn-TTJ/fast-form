@@ -53,10 +53,12 @@
             <ui-button @click="dataSet"><label class="new-btn">数据设置</label></ui-button>
         </section>
     </Card>
+    <class-name v-model="text.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import textConf from './textConf.js'
 import { defineExpose } from 'vue';
 const { text, fontSize, fontWeight, row, reSet, setAttr, setRow, dataSet } = textConf()

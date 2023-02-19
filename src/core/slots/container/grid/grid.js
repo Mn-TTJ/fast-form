@@ -11,13 +11,16 @@ export default (slots, name) => {
         if (!cProps) cProps = reactive({
             row: reactive({
                 justify: 'flex-start',
-                align: 'flex-start'
+                align: 'flex-start',
+                class: []
             }), col1: reactive({
                 colCount: 12,
-                colOffset: 0
+                colOffset: 0,
+                class: []
             }), col2: reactive({
                 colCount: 12,
-                colOffset: 0
+                colOffset: 0,
+                class: []
             })
         })
 

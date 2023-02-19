@@ -7,8 +7,7 @@
         </section>
         <section>
             <label>输入提醒</label>
-            <aside><ui-input v-model="parser" @blur="setAttr(parser, 'parser')"
-                    @keyup.enter="setAttr(parser, 'parser')" />
+            <aside><ui-input v-model="parser" @blur="setAttr(parser, 'parser')" @keyup.enter="setAttr(parser, 'parser')" />
             </aside>
         </section>
         <section>
@@ -27,10 +26,12 @@
             <ui-button @click="dataSet"><label class="new-btn">数据设置</label></ui-button>
         </section>
     </Card>
+    <class-name v-model="autocompelete.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import autocompeleteConf from './autocompeleteConf.js'
 import { defineExpose } from 'vue';
 const { autocompelete, name, parser, reSet, setAttr, dataSet } = autocompeleteConf()

@@ -15,14 +15,16 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             checkBox: {
                 name: '',
                 disabled: false,
                 labels: ['标签1', '标签2', '标签3'],
                 all: false,
-                hasBorder: false
+                hasBorder: false,
+                class: []
             }
         })
 
@@ -30,7 +32,7 @@ export default (slots, name) => {
 
         return <EditBox cProps={cProps.box} cName={'box'}>
             <ComponentBox cName='ui-box' cProps={cProps.box}>
-                <uiBox {...cProps.box}>
+                <uiBox {...cProps.box} >
                     <DrogBox disabled>
                         <EditBox cProps={cProps.checkBox} cName={'checkBox'}>
                             <ComponentBox cName='ui-checkBox' cProps={cProps.checkBox}>

@@ -22,10 +22,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="timepicker.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import timepickerConf from './timePickerConf.js'
 import { defineExpose } from 'vue';
 const { timepicker, name, max, min, reSet, setAttr } = timepickerConf()

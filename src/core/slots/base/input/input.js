@@ -15,7 +15,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             input: {
                 name: '',
@@ -25,6 +26,7 @@ export default (slots, name) => {
                 min: 0,
                 clearable: false,
                 password: false,
+                class: []
             }
         })
 

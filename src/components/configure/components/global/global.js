@@ -1,7 +1,12 @@
 import { treeMethod } from "@/core/tree/tree"
-import { store, setForm } from "@/core/store/store"
+import { store, setForm, setCurtain, turnOnCurtain, setClass } from "@/core/store/store"
+import Coding from '@/components/curtain/components/coding/Coding.vue'
+import { ref } from 'vue'
+import { getClassSet } from "@/core/utils/utils"
 
 export default function () {
+    const css = ref('')
+
     const checkName = () => {
         const set = new Set()
         const tree = treeMethod.getTree()
@@ -34,5 +39,18 @@ export default function () {
         else store.tips({ text: '已取消表单控件', color: '#a9a7a7', auto: true })
     }
 
-    return { checkName, useForm }
+    const customCss = () => {
+        const preSet = localStorage.getItem('style')
+        setCurtain(<Coding preSet={preSet} tips={'避免使用标签选择器，请使用类名选择器'} mode='css' callBack={editCallBack} />)
+        turnOnCurtain(true)
+    }
+
+    const editCallBack = (val) => {
+        css.value = val
+        localStorage.setItem('style', val)
+        const classSet = getClassSet(val)
+        setClass(classSet)
+    }
+
+    return { checkName, useForm, customCss, css }
 }

@@ -15,12 +15,14 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             dateRange: {
                 name: '',
                 disabled: false,
-                week: true
+                week: true,
+                class: []
             }
         })
 

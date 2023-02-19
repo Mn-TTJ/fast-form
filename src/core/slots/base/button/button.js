@@ -15,7 +15,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             button: {
                 label: '按钮',
@@ -25,8 +26,9 @@ export default (slots, name) => {
                 size: 'middle',
                 color: '#ffffff',
                 text: false,
-                loading: false
-            }
+                loading: false,
+                class: []
+            },
         })
 
         return <EditBox cProps={cProps.box} cName={'box'}>

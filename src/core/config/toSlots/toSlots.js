@@ -67,7 +67,7 @@ export const toSlots = (vNodes) => {
             cProps.tabs = element.props
             cProps.panels = new Array()
             element.slots.default.forEach((e) => {
-                cProps.panels.push(Object.assign(e.props, { cName: 'ui-tabs-panel' }))
+                cProps.panels.push(Object.assign(e.props, { cName: 'ui-tab-panel' }))
                 children.push(toSlots(e.slots.default))
             })
         }

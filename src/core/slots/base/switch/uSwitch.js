@@ -15,7 +15,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             switch: {
                 name: '',
@@ -24,7 +25,8 @@ export default (slots, name) => {
                 lg: false,
                 trackColor: '#dcdfe6',
                 sliderColor: '#ffffff',
-                onColor: '#409eff'
+                onColor: '#409eff',
+                class: []
             }
         })
 

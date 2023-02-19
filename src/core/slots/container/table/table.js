@@ -13,6 +13,7 @@ export default (slots, name) => {
             table: {
                 border: true,
                 height: 'auto',
+                class: [],
                 data: [
                     {
                         aa: {

@@ -8,8 +8,8 @@
         </section>
         <section>
             <label>圆角</label>
-            <aside><ui-input v-model="radius" @blur="setAttr(radius, 'radius')"
-                    @keyup.enter="setAttr(radius, 'radius')" /></aside>
+            <aside><ui-input v-model="radius" @blur="setAttr(radius, 'radius')" @keyup.enter="setAttr(radius, 'radius')" />
+            </aside>
         </section>
         <section>
             <label>居左</label>
@@ -40,10 +40,12 @@
             <aside><ui-colorpicker v-model="card.tColor" /></aside>
         </section>
     </Card>
+    <class-name v-model="card.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import flodCardConf from './flodCardConf'
 import { defineExpose } from 'vue';
 const { card, radius, title, reSet, setAttr } = flodCardConf()

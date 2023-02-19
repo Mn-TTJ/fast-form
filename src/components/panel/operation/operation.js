@@ -1,8 +1,9 @@
 import { onMounted } from 'vue'
 import { reBuild } from '@/core/slots'
 import { toSlots } from '@/core/config/toSlots/toSlots'
-import { store, historyStack } from '@/core/store/store'
+import { store, historyStack, setClass } from '@/core/store/store'
 import { treeMethod } from '@/core/tree/tree'
+import { getClassSet } from '@/core/utils/utils'
 export default function () {
     onMounted(() => {
         let history = localStorage.getItem('slots')
@@ -15,5 +16,7 @@ export default function () {
         }
         reBuild(tNode, toSlots(JSON.parse(history)))
         historyStack.setPastStack({ tNode, history })
+        const css = localStorage.getItem('style')
+        setClass(getClassSet(css ? css : ''))
     })
 }

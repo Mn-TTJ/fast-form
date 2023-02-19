@@ -7,8 +7,7 @@
         </section>
         <section>
             <label>输入提示</label>
-            <aside><ui-input v-model="parser" @blur="setAttr(parser, 'parser')"
-                    @keyup.enter="setAttr(parser, 'parser')" />
+            <aside><ui-input v-model="parser" @blur="setAttr(parser, 'parser')" @keyup.enter="setAttr(parser, 'parser')" />
             </aside>
         </section>
         <section>
@@ -44,10 +43,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="textarea.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import textareaConf from './textareaConf.js'
 import { defineExpose } from 'vue';
 const { textarea, name, parser, max, min, maxRow, minRow, reSet, setAttr, setMax, setMin, setMaxRow, setMinRow } = textareaConf()

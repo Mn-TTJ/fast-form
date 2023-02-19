@@ -17,10 +17,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="colorpicker.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import colorpickerConf from './colorPickerConf.js'
 import { defineExpose } from 'vue';
 const { colorpicker, name, reSet, setAttr } = colorpickerConf()

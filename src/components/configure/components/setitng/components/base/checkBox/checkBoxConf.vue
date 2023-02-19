@@ -38,10 +38,12 @@
             <ui-button class="radio-new-btn" @click="addLabel">添加</ui-button>
         </section>
     </Card>
+    <class-name v-model="checkBox.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import checkBoxConf from './checkBoxConf.js'
 import { defineExpose } from 'vue';
 const { checkBox, name, labels, reSet, setAttr, setLabel, addLabel, deleteLabel } = checkBoxConf()

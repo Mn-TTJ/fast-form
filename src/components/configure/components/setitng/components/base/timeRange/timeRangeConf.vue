@@ -32,10 +32,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="timeRange.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import timeRangeConf from './timeRangeConf.js'
 import { defineExpose } from 'vue';
 const { timeRange, name, max, min, reSet, setAttr, setMax, setMin } = timeRangeConf()

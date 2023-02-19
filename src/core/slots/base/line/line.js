@@ -13,7 +13,8 @@ export default (slots, name) => {
                 color: '#EBEEF5',
                 len: '100%',
                 space: '0.5rem',
-                dashed: false
+                dashed: false,
+                class: []
             }
         })
 
