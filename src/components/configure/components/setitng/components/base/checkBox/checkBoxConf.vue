@@ -8,24 +8,24 @@
         <section>
             <label>全选</label>
             <aside>
-                <ui-switch v-model="checkBox.all"></ui-switch>
+                <ui-switch v-model="checkbox.all"></ui-switch>
             </aside>
         </section>
         <section>
             <label>边框</label>
             <aside>
-                <ui-switch v-model="checkBox.hasBorder"></ui-switch>
+                <ui-switch v-model="checkbox.hasBorder"></ui-switch>
             </aside>
         </section>
         <section>
             <label>禁用</label>
             <aside>
-                <ui-switch v-model="checkBox.disabled"></ui-switch>
+                <ui-switch v-model="checkbox.disabled"></ui-switch>
             </aside>
         </section>
     </Card>
     <Card label="数据设置" :col="1">
-        <template v-for="(label, index) in checkBox.labels" :key="label+index">
+        <template v-for="(label, index) in checkbox.labels" :key="label+index">
             <section>
                 <label>标签</label>
                 <aside><ui-input v-model="labels[index]" @blur="setLabel(index)" @keyup.enter="setLabel(index)" />
@@ -38,7 +38,7 @@
             <ui-button class="radio-new-btn" @click="addLabel">添加</ui-button>
         </section>
     </Card>
-    <class-name v-model="checkBox.class"></class-name>
+    <class-name v-model="checkbox.class"></class-name>
 </template>
 
 <script setup>
@@ -46,7 +46,7 @@ import Card from '@/components/frame/card/Card.vue';
 import ClassName from '../../className/ClassName.vue';
 import checkBoxConf from './checkBoxConf.js'
 import { defineExpose } from 'vue';
-const { checkBox, name, labels, reSet, setAttr, setLabel, addLabel, deleteLabel } = checkBoxConf()
+const { checkbox, name, labels, reSet, setAttr, setLabel, addLabel, deleteLabel } = checkBoxConf()
 defineExpose({ reSet })
 </script>
 

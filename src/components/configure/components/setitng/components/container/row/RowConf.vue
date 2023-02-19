@@ -7,7 +7,7 @@
         </section>
         <section>
             <label>垂直对齐</label>
-            <aside><ui-radio tick group="align" :labels="['居左', '居中', '居右']" :values="['flex-start', 'center', 'flex-end']"
+            <aside><ui-radio tick group="align" :labels="['居上', '居中', '居下']" :values="['flex-start', 'center', 'flex-end']"
                     v-model="align" /></aside>
         </section>
     </Card>

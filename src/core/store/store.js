@@ -15,7 +15,9 @@ const store = reactive({
     rootFilp: null,
     tips: null,
     form: false,
-    classSet: []
+    classSet: [],
+    horizontal: 0,
+    vertical: 0
 })
 
 const setEditor = (editor) => store.editor = editor
@@ -71,4 +73,18 @@ const historyStack = { setPastStack, toNextStack, toPackStack }
 
 const setClass = (classSet) => store.classSet = classSet
 
-export { store, setEditor, setdroger, turnOnCurtain, setCurtain, setCofNode, setDelNode, setRoot, setTips, setForm, setClass, historyStack }
+const setSpace = (direction, inOrde) => {
+    if (direction) {
+        if (inOrde) store.horizontal++
+        else {
+            if (store.horizontal > 0) store.horizontal--
+        }
+    } else {
+        if (inOrde) store.vertical++
+        else {
+            if (store.vertical > 0) store.vertical--
+        }
+    }
+}
+
+export { store, setEditor, setdroger, turnOnCurtain, setCurtain, setCofNode, setDelNode, setRoot, setTips, setForm, setClass, setSpace, historyStack }

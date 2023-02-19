@@ -1,0 +1,265 @@
+[
+    {
+        "vNode": "ui-tabs",
+        "props": {
+            "active": 0,
+            "height": "auto",
+            "width": "100%",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-tab-panel",
+                    "props": {
+                        "label": "1"
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-table",
+                                "props": {
+                                    "border": true,
+                                    "height": "auto",
+                                    "class": [],
+                                    "data": [
+                                        {
+                                            "aa": {
+                                                "label": "aa"
+                                            },
+                                            "bb": {
+                                                "label": "bb"
+                                            },
+                                            "cc": {
+                                                "label": "cc"
+                                            }
+                                        },
+                                        {
+                                            "aa": {
+                                                "label": "aa"
+                                            },
+                                            "bb": {
+                                                "label": "bb"
+                                            },
+                                            "cc": {
+                                                "label": "cc"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "aa",
+                                                "label": "aa",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        },
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "bb",
+                                                "label": "bb",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        },
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "cc",
+                                                "label": "cc",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                },
+                                "flip": null
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-tab-panel",
+                    "props": {
+                        "label": "2"
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-table",
+                                "props": {
+                                    "border": true,
+                                    "height": "auto",
+                                    "class": [],
+                                    "data": [
+                                        {
+                                            "aa": {
+                                                "label": "aa"
+                                            },
+                                            "bb": {
+                                                "label": "bb"
+                                            },
+                                            "cc": {
+                                                "label": "cc"
+                                            }
+                                        },
+                                        {
+                                            "aa": {
+                                                "label": "aa"
+                                            },
+                                            "bb": {
+                                                "label": "bb"
+                                            },
+                                            "cc": {
+                                                "label": "cc"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "aa",
+                                                "label": "aa",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        },
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "bb",
+                                                "label": "bb",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        },
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "cc",
+                                                "label": "cc",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                },
+                                "flip": null
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-tab-panel",
+                    "props": {
+                        "label": "3"
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-table",
+                                "props": {
+                                    "border": true,
+                                    "height": "auto",
+                                    "class": [],
+                                    "data": [
+                                        {
+                                            "aa": {
+                                                "label": "aa"
+                                            },
+                                            "bb": {
+                                                "label": "bb"
+                                            },
+                                            "cc": {
+                                                "label": "cc"
+                                            }
+                                        },
+                                        {
+                                            "aa": {
+                                                "label": "aa"
+                                            },
+                                            "bb": {
+                                                "label": "bb"
+                                            },
+                                            "cc": {
+                                                "label": "cc"
+                                            }
+                                        }
+                                    ]
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "aa",
+                                                "label": "aa",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        },
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "bb",
+                                                "label": "bb",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        },
+                                        {
+                                            "vNode": "ui-table-column",
+                                            "props": {
+                                                "prop": "cc",
+                                                "label": "cc",
+                                                "width": "auto"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                },
+                                "flip": null
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "flip": null
+    }
+]

@@ -1,5 +1,6 @@
 <template>
     <div class="preview" @click.stop ref="root">
+        <div v-html="css"></div>
     </div>
 </template>
 
@@ -7,7 +8,7 @@
 import { ref } from 'vue'
 import preview from './preview'
 const root = ref(null)
-preview(root)
+const { css } = preview(root)
 </script>
 
 <style lang="scss" scoped>

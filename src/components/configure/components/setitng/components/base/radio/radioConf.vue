@@ -66,12 +66,10 @@
             <ui-button class="radio-new-btn" @click="addLabel">添加</ui-button>
         </section>
     </Card>
-    <class-name v-model="radio.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
-import ClassName from '../../className/ClassName.vue';
 import radioConf from './radioConf.js'
 import { defineExpose } from 'vue';
 const { radio, name, group, labels, values, reSet, setAttr, setLabel, setValue, addLabel, deleteLabel } = radioConf()

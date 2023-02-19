@@ -29,3 +29,29 @@ p {
     flex: 3;
     text-align: left;
 }
+
+.couter-btn {
+    display: flex;
+    margin: 0.5rem;
+    padding: 0.5rem;
+    background-color: #F0F0F0;
+    color: darkcyan;
+
+    p {
+        text-align: center;
+        font-size: 0.9rem;
+    }
+}
+
+.operation-btn {
+    width: 2.5rem;
+    display: flex;
+    font-family: iconfont;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+
+    &:hover {
+        cursor: pointer;
+    }
+}

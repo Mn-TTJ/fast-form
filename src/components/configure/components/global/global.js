@@ -1,8 +1,9 @@
 import { treeMethod } from "@/core/tree/tree"
 import { store, setForm, setCurtain, turnOnCurtain, setClass } from "@/core/store/store"
 import Coding from '@/components/curtain/components/coding/Coding.vue'
-import { ref } from 'vue'
+import { ref, watch } from 'vue'
 import { getClassSet } from "@/core/utils/utils"
+import CssImport from '@/components/curtain/components/cssImport/CssImport.vue'
 
 export default function () {
     const css = ref('')
@@ -46,11 +47,19 @@ export default function () {
     }
 
     const editCallBack = (val) => {
-        css.value = val
         localStorage.setItem('style', val)
         const classSet = getClassSet(val)
         setClass(classSet)
     }
 
-    return { checkName, useForm, customCss, css }
+    const setCss = () => {
+        setCurtain(<CssImport></CssImport>)
+        turnOnCurtain(true)
+    }
+
+    watch(() => store.classSet, () => {
+        css.value = localStorage.getItem('style')
+    })
+
+    return { store, checkName, useForm, customCss, setCss, css }
 }

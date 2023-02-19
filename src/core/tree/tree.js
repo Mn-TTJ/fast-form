@@ -91,7 +91,7 @@ const treeMethod = {
     },
 
     toJson: () => JSON.stringify(tree, (key, value) => {
-        if (key == 'id' || key == 'parent' || key == 'reBuild' || key == 'clear' || key == 'filp' || key == 'distory') return undefined
+        if (key == 'id' || key == 'parent' || key == 'reBuild' || key == 'clear' || key == 'flip' || key == 'distory') return undefined
         return value
     }, 4),
 

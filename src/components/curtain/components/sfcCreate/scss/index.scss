@@ -1,0 +1,48 @@
+.sfc-create {
+    position: relative;
+    padding: 0.5rem;
+    width: calc(100% - 32rem);
+    height: 80%;
+    min-width: 30rem;
+    min-height: 32rem;
+    left: 50%;
+    top: 50%;
+    background-color: white;
+    transform: translate(-50%, -50%);
+    border-radius: 0.2rem;
+}
+
+header {
+    position: relative;
+    display: flex;
+}
+
+.sfc-btn-2 {
+    position: absolute;
+    right: 0rem;
+}
+
+.sfc-btn-2,
+.sfc-btn-1 {
+    button {
+        position: relative;
+        padding: 0.4rem;
+        border: none;
+        color: darkcyan;
+        cursor: pointer;
+    }
+
+    &>button:not(:first-child) {
+        &::after {
+            position: absolute;
+            content: '';
+            display: block;
+            top: 50%;
+            left: -0.05rem;
+            background-color: darkcyan;
+            height: 1rem;
+            width: 0.1rem;
+            transform: translate(-50%, -50%) scaleX(0.5);
+        }
+    }
+}

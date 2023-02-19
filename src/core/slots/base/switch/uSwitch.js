@@ -26,7 +26,6 @@ export default (slots, name) => {
                 trackColor: '#dcdfe6',
                 sliderColor: '#ffffff',
                 onColor: '#409eff',
-                class: []
             }
         })
 

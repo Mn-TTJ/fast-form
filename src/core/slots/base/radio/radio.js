@@ -28,8 +28,7 @@ export default (slots, name) => {
                 tick: false,
                 noBorder: false,
                 btn: false,
-                full: false,
-                class: []
+                full: false
             }
         })
 

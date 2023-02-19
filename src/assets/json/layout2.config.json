@@ -1,0 +1,194 @@
+[
+    {
+        "vNode": "ui-flod-card",
+        "props": {
+            "unActive": false,
+            "radius": "0.2rem",
+            "title": "卡牌1",
+            "tColor": "#606266",
+            "hColor": "#ffffff",
+            "bColor": "#ffffff",
+            "left": false,
+            "shadow": "auto",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-box",
+                    "props": {
+                        "flex": false,
+                        "width": "100%",
+                        "height": "auto",
+                        "color": "#ffffff",
+                        "padding": "0.1rem",
+                        "margin": "0rem",
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-dateRange",
+                                "props": {
+                                    "name": "",
+                                    "disabled": false,
+                                    "week": true,
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": []
+                                },
+                                "flip": null
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-flod-card",
+        "props": {
+            "unActive": false,
+            "radius": "0.2rem",
+            "title": "卡片2",
+            "tColor": "#606266",
+            "hColor": "#ffffff",
+            "bColor": "#ffffff",
+            "left": false,
+            "shadow": "auto",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-box",
+                    "props": {
+                        "flex": false,
+                        "width": "100%",
+                        "height": "auto",
+                        "color": "#ffffff",
+                        "padding": "0.1rem",
+                        "margin": "0rem",
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-timeRange",
+                                "props": {
+                                    "name": "",
+                                    "disabled": false,
+                                    "min": [
+                                        "00:00:00",
+                                        "00:00:00"
+                                    ],
+                                    "max": [
+                                        "23:59:59",
+                                        "23:59:59"
+                                    ],
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": []
+                                },
+                                "flip": null
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-flod-card",
+        "props": {
+            "unActive": false,
+            "radius": "0.2rem",
+            "title": "卡片3",
+            "tColor": "#606266",
+            "hColor": "#ffffff",
+            "bColor": "#ffffff",
+            "left": false,
+            "shadow": "auto",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-table",
+                    "props": {
+                        "border": true,
+                        "height": "auto",
+                        "class": [],
+                        "data": [
+                            {
+                                "aa": {
+                                    "label": "aa"
+                                },
+                                "bb": {
+                                    "label": "bb"
+                                },
+                                "cc": {
+                                    "label": "cc"
+                                }
+                            },
+                            {
+                                "aa": {
+                                    "label": "aa"
+                                },
+                                "bb": {
+                                    "label": "bb"
+                                },
+                                "cc": {
+                                    "label": "cc"
+                                }
+                            }
+                        ]
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-table-column",
+                                "props": {
+                                    "prop": "aa",
+                                    "label": "aa",
+                                    "width": "auto"
+                                },
+                                "slots": {
+                                    "default": []
+                                },
+                                "flip": null
+                            },
+                            {
+                                "vNode": "ui-table-column",
+                                "props": {
+                                    "prop": "bb",
+                                    "label": "bb",
+                                    "width": "auto"
+                                },
+                                "slots": {
+                                    "default": []
+                                },
+                                "flip": null
+                            },
+                            {
+                                "vNode": "ui-table-column",
+                                "props": {
+                                    "prop": "cc",
+                                    "label": "cc",
+                                    "width": "auto"
+                                },
+                                "slots": {
+                                    "default": []
+                                },
+                                "flip": null
+                            }
+                        ]
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    }
+]

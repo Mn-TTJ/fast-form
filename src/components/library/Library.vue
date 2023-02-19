@@ -7,9 +7,8 @@
             </Card>
         </template>
         <template #two>
-            <Layout></Layout>
-            <Layout></Layout>
-            <Layout></Layout>
+            <Layout v-for="(layout, index) in layoutConf" :key="index" :label="layout.label" :image="layout.image"
+                :json="layout.json"></Layout>
         </template>
     </Menu>
 </template>
@@ -20,4 +19,5 @@ import Card from '../frame/card/Card.vue';
 import DragBox from './components/dragBox/DragBox.vue';
 import cardConfig from '@/core/config/card'
 import Layout from './components/layout/Layout.vue'
+import layoutConf from '@/core/config/layout/layout.conf';
 </script>

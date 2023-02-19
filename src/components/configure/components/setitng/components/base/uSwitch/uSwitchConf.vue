@@ -40,12 +40,10 @@
             </aside>
         </section>
     </Card>
-    <class-name v-model="uSwitch.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
-import ClassName from '../../className/ClassName.vue';
 import uSwitchConf from './uSwitchConf.js'
 import { defineExpose } from 'vue';
 const { uSwitch, name, reSet, setAttr } = uSwitchConf()
