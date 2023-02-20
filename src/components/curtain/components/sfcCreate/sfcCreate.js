@@ -19,6 +19,9 @@ export default function (vueEditer, cssEditer) {
     let hasForm = false
     const ObjectMap = new Map()
 
+    let tempRes = ''
+    let cssRes = ''
+
     const compileClass = (element, global) => {
         let classStr = ''
         if (element.props.class) classStr += element.props.class.join(' ')
@@ -38,7 +41,7 @@ export default function (vueEditer, cssEditer) {
         let temp = ''
         if (mValue) {
             if (!hasForm) {
-                script += '\nimport {ref} from \'vue\''
+                script += '\nimport {ref} from "vue"'
                 hasForm = true
             }
             let count = 1
@@ -116,7 +119,7 @@ export default function (vueEditer, cssEditer) {
         const global = store.horizontal > 0 || store.vertical > 0
         let template = '<template>'
         if (store.form) template += '\n\t<ui-form>'
-        let script = '<script setup>'
+        let script = '<script setup>\n// 前置包mn-ttj-ui'
         const fn = (list, tab) => {
             let temp = ''
             list.forEach(element => {
@@ -138,7 +141,7 @@ export default function (vueEditer, cssEditer) {
         if (store.form) template += '\n\t</ui-form>'
         template += '\n</template>'
         template += ('\n\n' + script + '\n</script>')
-        if (store.classSet.length > 0 || global) template += ('\n\n<style scope>\n@import \'./css/index.css\';\n</style>')
+        if (store.classSet.length > 0 || global) template += ('\n\n<style scope>\n@import \'../css/index.css\';\n</style>')
         return template
     }
 
@@ -154,6 +157,7 @@ export default function (vueEditer, cssEditer) {
     }
 
     const vueTemplate = (editer) => {
+        tempRes = compileTemplates()
         ace.edit(editer, {
             mode: 'ace/mode/html',
             theme: 'ace/theme/monokai',
@@ -161,10 +165,11 @@ export default function (vueEditer, cssEditer) {
             tabSize: 4,// 制表符设置为 4 个空格大小
             selectionStyle: "text",
             readOnly: true
-        }).getSession().setValue(compileTemplates())
+        }).getSession().setValue(tempRes)
     }
 
     const cssTemplate = (editer) => {
+        cssRes = compileCss()
         ace.edit(editer, {
             mode: 'ace/mode/css',
             theme: 'ace/theme/monokai',
@@ -172,7 +177,7 @@ export default function (vueEditer, cssEditer) {
             tabSize: 4,// 制表符设置为 4 个空格大小
             selectionStyle: "text",
             readOnly: true
-        }).getSession().setValue(compileCss())
+        }).getSession().setValue(cssRes)
     }
 
     const init = watch([vueEditer, cssEditer], () => {
@@ -185,7 +190,7 @@ export default function (vueEditer, cssEditer) {
         downloadZip([{
             folder: 'vue',
             name: 'form.vue',
-            content: compileTemplates()
+            content: tempRes
         }])
     }
 
@@ -193,7 +198,7 @@ export default function (vueEditer, cssEditer) {
         downloadZip([{
             folder: 'css',
             name: 'index.css',
-            content: compileCss()
+            content: cssRes
         }])
     }
 
@@ -201,11 +206,11 @@ export default function (vueEditer, cssEditer) {
         downloadZip([{
             folder: 'vue',
             name: 'form.vue',
-            content: compileTemplates()
+            content: tempRes
         }, {
             folder: 'css',
             name: 'index.css',
-            content: compileCss()
+            content: cssRes
         }])
     }
 
