@@ -1,3 +1,6 @@
+import { saveAs } from "file-saver"
+import JSZip from "jszip"
+
 const setNumber = (name, attr, node) => {
     let last = attr.value
     return () => {
@@ -42,4 +45,15 @@ const getClassSet = (str) => {
     set = set.map(x => x.slice(1))
     return Array.from(new Set(set))
 }
-export { setNumber, setLimit, copy, isDOM, getClassSet }
+
+const downloadZip = (files) => {
+    const zip = new JSZip()
+    files.forEach(file => {
+        const folder = zip.folder(file.folder)
+        folder.file(file.name, btoa(unescape(encodeURIComponent(file.content))), { base64: true })
+    });
+    zip.generateAsync({ type: 'blob' }).then(content => {
+        saveAs(content, 'download.zip')
+    })
+}
+export { setNumber, setLimit, copy, isDOM, getClassSet, downloadZip }
