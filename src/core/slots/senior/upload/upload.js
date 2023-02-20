@@ -15,7 +15,8 @@ export default (slots, name) => {
                 cover: true,
                 multiple: false,
                 max: 100,
-                picture: false
+                picture: false,
+                class: []
             }
         })
 

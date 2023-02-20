@@ -24,13 +24,15 @@
             <aside><ui-input v-model="data.active" @blur="setActive" @keyup.enter="setActive" /></aside>
         </section>
     </Card>
+    <class-name v-model="tabs.class"></class-name>
 </template>
 
 <script setup>
 import { defineExpose } from 'vue';
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import tabsConf from './tabsConf'
-const { panels, data, reSet, setAttr, setActive, setLabel, addPanel, delPanel } = tabsConf()
+const { tabs, panels, data, reSet, setAttr, setActive, setLabel, addPanel, delPanel } = tabsConf()
 defineExpose({ reSet })
 </script>
 

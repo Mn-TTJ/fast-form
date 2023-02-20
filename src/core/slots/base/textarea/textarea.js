@@ -15,7 +15,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             textarea: {
                 name: '',
@@ -25,7 +26,8 @@ export default (slots, name) => {
                 min: 0,
                 minRow: 0,
                 maxRow: 10,
-                resizable: false
+                resizable: false,
+                class: []
             }
         })
 
@@ -33,7 +35,7 @@ export default (slots, name) => {
             <ComponentBox cName='ui-box' cProps={cProps.box}>
                 <uiBox {...cProps.box}>
                     <DrogBox disabled>
-                        <EditBox cProps={cProps.input} cName={'textarea'}>
+                        <EditBox cProps={cProps.textarea} cName={'textarea'}>
                             <ComponentBox cName='ui-textarea' cProps={cProps.textarea}>
                                 <uiTextarea {...cProps.textarea} />
                             </ComponentBox>

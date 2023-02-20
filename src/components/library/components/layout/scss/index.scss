@@ -1,6 +1,32 @@
 .layout-box {
+    position: relative;
     margin: 0.5rem;
     height: 16rem;
     border: 1px solid darkcyan;
     border-radius: 0.5rem;
+    cursor: pointer;
+}
+
+.layout-image {
+    height: 100%;
+    width: 100%;
+    background-position: center center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    border-radius: 0.5rem;
+}
+
+label {
+    position: absolute;
+    bottom: 0.5rem;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 0.9rem;
+    color: darkcyan;
+}
+
+.layout-preview {
+    position: absolute;
+    width: 20rem;
+    height: 20rem;
 }

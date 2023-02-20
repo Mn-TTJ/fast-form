@@ -1,0 +1,579 @@
+[
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "问题1",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-radio",
+                    "props": {
+                        "name": "",
+                        "disabled": false,
+                        "labels": [
+                            "标签1",
+                            "标签2",
+                            "标签3"
+                        ],
+                        "values": [
+                            "1",
+                            "2",
+                            "3"
+                        ],
+                        "group": "3125",
+                        "circular": true,
+                        "tick": false,
+                        "noBorder": false,
+                        "btn": false,
+                        "full": false
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "问题2",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-radio",
+                    "props": {
+                        "name": "",
+                        "disabled": false,
+                        "labels": [
+                            "标签1",
+                            "标签2",
+                            "标签3"
+                        ],
+                        "values": [
+                            "1",
+                            "2",
+                            "3"
+                        ],
+                        "group": "7084",
+                        "circular": true,
+                        "tick": false,
+                        "noBorder": false,
+                        "btn": false,
+                        "full": false
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "问题3",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-radio",
+                    "props": {
+                        "name": "",
+                        "disabled": false,
+                        "labels": [
+                            "标签1",
+                            "标签2",
+                            "标签3"
+                        ],
+                        "values": [
+                            "1",
+                            "2",
+                            "3"
+                        ],
+                        "group": "8466",
+                        "circular": false,
+                        "tick": false,
+                        "noBorder": false,
+                        "btn": false,
+                        "full": false
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "问题4",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-checkbox",
+                    "props": {
+                        "name": "",
+                        "disabled": false,
+                        "labels": [
+                            "标签1",
+                            "标签2",
+                            "标签3"
+                        ],
+                        "all": false,
+                        "hasBorder": false,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "问题5",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-checkbox",
+                    "props": {
+                        "name": "",
+                        "disabled": false,
+                        "labels": [
+                            "标签1",
+                            "标签2",
+                            "标签3"
+                        ],
+                        "all": false,
+                        "hasBorder": false,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "问题6",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-checkbox",
+                    "props": {
+                        "name": "",
+                        "disabled": false,
+                        "labels": [
+                            "标签1",
+                            "标签2",
+                            "标签3"
+                        ],
+                        "all": true,
+                        "hasBorder": false,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "问题7",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-counter",
+                    "props": {
+                        "name": "",
+                        "disabled": false,
+                        "skip": 1,
+                        "sm": false,
+                        "lg": false,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "问题8",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-switch",
+                    "props": {
+                        "name": "",
+                        "disabled": false,
+                        "sm": false,
+                        "lg": false,
+                        "trackColor": "#dcdfe6",
+                        "sliderColor": "#ffffff",
+                        "onColor": "#409eff"
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    }
+]

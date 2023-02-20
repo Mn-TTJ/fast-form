@@ -7,13 +7,13 @@
         </section>
         <section>
             <label>高</label>
-            <aside><ui-input v-model="height" @blur="setAttr(height, 'height')"
-                    @keyup.enter="setAttr(height, 'height')" /></aside>
+            <aside><ui-input v-model="height" @blur="setAttr(height, 'height')" @keyup.enter="setAttr(height, 'height')" />
+            </aside>
         </section>
         <section>
             <label>圆角</label>
-            <aside><ui-input v-model="radius" @blur="setAttr(radius, 'radius')"
-                    @keyup.enter="setAttr(radius, 'radius')" /></aside>
+            <aside><ui-input v-model="radius" @blur="setAttr(radius, 'radius')" @keyup.enter="setAttr(radius, 'radius')" />
+            </aside>
         </section>
         <section>
             <label>阴影</label>
@@ -34,10 +34,12 @@
             </aside>
         </section>
     </Card>
+    <class-name v-model="dialog.class"></class-name>
 </template>
 
 <script setup>
 import Card from '@/components/frame/card/Card.vue';
+import ClassName from '../../className/ClassName.vue';
 import dialogConf from './dialogConf'
 import { defineExpose } from 'vue';
 const { dialog, radius, width, height, title, reSet, setAttr } = dialogConf()

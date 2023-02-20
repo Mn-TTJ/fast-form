@@ -1,16 +1,22 @@
 import { watch } from 'vue'
 import ace from 'ace-builds'
 import 'ace-builds/webpack-resolver'
+import 'ace-builds/src-noconflict/ext-language_tools.js'
 import 'ace-builds/src-noconflict/theme-monokai' // 默认设置的主题
 import 'ace-builds/src-noconflict/snippets/json'
 import 'ace-builds/src-noconflict/snippets/text'
+import 'ace-builds/src-noconflict/snippets/html'
+import 'ace-builds/src-noconflict/snippets/css'
 export default function (codeBox, codeTips, props) {
+    ace.require("ace/ext/language_tools")
 
     let edit = null
 
     const aceMode = {
         json: 'ace/mode/json',
-        text: 'ace/mode/text'
+        text: 'ace/mode/text',
+        html: 'ace/mode/html',
+        css: 'ace/mode/css'
     }
 
     const init = watch(codeBox, () => {
@@ -19,9 +25,12 @@ export default function (codeBox, codeTips, props) {
             theme: 'ace/theme/monokai',
             fontSize: 14, // 编辑器内字体大小
             tabSize: 4,// 制表符设置为 4 个空格大小
-            selectionStyle: "text"
+            selectionStyle: "text",
+            enableSnippets: true,
+            enableLiveAutocompletion: true
         })
-        edit.getSession().setValue(JSON.stringify(props.preSet, null, 4))
+        if (props.json) edit.getSession().setValue(JSON.stringify(props.preSet, null, 4))
+        else edit.getSession().setValue(props.preSet)
         const tiper = ace.edit(codeTips.value, {
             mode: aceMode.text,
             theme: 'ace/theme/monokai',
@@ -34,7 +43,10 @@ export default function (codeBox, codeTips, props) {
         init()
     })
 
-    const getContent = () => props.callBack(JSON.parse(edit.getSession().getValue()))
+    const getContent = () => {
+        if (props.json) props.callBack(JSON.parse(edit.getSession().getValue()))
+        else props.callBack(edit.getSession().getValue())
+    }
 
     return { getContent }
 }

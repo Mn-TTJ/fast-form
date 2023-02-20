@@ -7,5 +7,6 @@ export default {
     },
     reverse: Boolean,
     filter: Function,
-    reSort: Function
+    reSort: Function,
+    disEidt: Boolean
 }

@@ -6,9 +6,12 @@ export default function () {
 
     let cNode
 
+    let row = ref({})
+
     const reSet = () => {
         cNode = store.cofNode
         if (!cNode) console.log("Error,can't find the component")
+        row.value = cNode.props
         justify.value = cNode.props.justify
         align.value = cNode.props.align
     }
@@ -23,5 +26,5 @@ export default function () {
 
     onMounted(reSet)
 
-    return { justify, align, reSet }
+    return { row, justify, align, reSet }
 }

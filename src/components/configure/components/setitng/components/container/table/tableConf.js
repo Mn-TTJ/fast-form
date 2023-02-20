@@ -7,6 +7,7 @@ export default function () {
     const tips = `[\n\t{\n\t\t"a":{\t\\\\列属性\n\t\t\t"label":"1"\t\\\\列属性值\n\t\t},\n\t\t...其他列\n\t}\t\\\\行数据\n\t...其他行\n]\n//行数据之间保持列属性键名一致`
 
     let cNode = null
+    let table = ref({})
     let tableProps = null
     let columns = ref([])
 
@@ -14,7 +15,7 @@ export default function () {
     const height = ref('auto')
 
     const dataSet = () => {
-        setCurtain(<Coding preSet={tableProps.data} tips={tips} mode='json' callBack={editCallBack} />)
+        setCurtain(<Coding json preSet={tableProps.data} tips={tips} mode='json' callBack={editCallBack} />)
         turnOnCurtain(true)
     }
 
@@ -50,6 +51,7 @@ export default function () {
         nextTick(() => tableProps.data = val)
         cNode.props.columns = newColumns
         columns.value = newColumns
+        turnOnCurtain(false)
     }
 
     const setTableAttr = (value, attr) => tableProps[attr] = value
@@ -59,6 +61,7 @@ export default function () {
     const reSet = () => {
         cNode = store.cofNode
         if (!cNode) console.log("Error,can't find the component")
+        table.value = cNode.props.table
         tableProps = cNode.props.table
         columns.value = copy(cNode.props.columns)
         border.value = tableProps.border
@@ -68,5 +71,5 @@ export default function () {
 
     onMounted(reSet)
 
-    return { border, height, columns, reSet, setTableAttr, setColumsAtrr, dataSet }
+    return { table, border, height, columns, reSet, setTableAttr, setColumsAtrr, dataSet }
 }

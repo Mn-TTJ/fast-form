@@ -13,14 +13,16 @@ export default (slots, name) => {
                 flex: false,
                 width: '100%',
                 height: 'auto',
-                colorpicker: '#ffffff',
+                color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             colorpicker: {
                 name: '',
                 disabled: false,
-                show: true
+                show: true,
+                class: []
             }
         })
 

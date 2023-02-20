@@ -12,12 +12,14 @@ export default function () {
     })
 
     let cNode = null
+    let tabs = ref({})
 
     let setActive = ref(null)
 
     const reSet = () => {
         cNode = store.cofNode
         if (!cNode) console.log("Error,can't find the component")
+        tabs.value = cNode.props
         panels.value = cNode.props.panels.map((site) => ({ label: site.label, key: site.label }))
         data.active = cNode.props.tabs.active
         data.width = cNode.props.tabs.width
@@ -64,5 +66,5 @@ export default function () {
 
     onMounted(reSet)
 
-    return { panels, data, reSet, setAttr, setActive, setLabel, addPanel, delPanel }
+    return { tabs, panels, data, reSet, setAttr, setActive, setLabel, addPanel, delPanel }
 }

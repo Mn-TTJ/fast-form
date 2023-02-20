@@ -1,6 +1,7 @@
 export default {
     tips: String,
-    preSet: Object,
+    preSet: Object | String,
     mode: String,
-    callBack: Function
+    callBack: Function,
+    json: Boolean
 }

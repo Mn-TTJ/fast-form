@@ -4,3 +4,12 @@
     width: 100%;
     background-color: white;
 }
+
+.opeartion-drogBox {
+    padding-bottom: 1rem;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
+}

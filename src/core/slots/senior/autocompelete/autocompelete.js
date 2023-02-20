@@ -15,7 +15,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             autocompelete: {
                 name: '',
@@ -23,6 +24,7 @@ export default (slots, name) => {
                 parser: '输入',
                 clearable: false,
                 tips: ['hello', 'world'],
+                class: []
             }
         })
 

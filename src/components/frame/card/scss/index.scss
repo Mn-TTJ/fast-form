@@ -41,4 +41,9 @@ main {
 
 .card-expand {
     max-height: 30rem;
+    overflow: scroll;
+
+    &::-webkit-scrollbar {
+        display: none;
+    }
 }

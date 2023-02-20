@@ -9,11 +9,14 @@ export default function () {
     let getColCount = ref(null)
     let getColOffset = ref(null)
 
-    let cNode
+    let cNode = null
+
+    let col = ref({})
 
     const reSet = () => {
         cNode = store.cofNode
         if (!cNode) console.log("Error,can't find the component")
+        col.value = cNode.props
         colCount.value = cNode.props.colCount
         colOffset.value = cNode.props.colOffset
         getColCount.value = setNumber('colCount', colCount, cNode)
@@ -22,5 +25,5 @@ export default function () {
 
     onMounted(reSet)
 
-    return { colOffset, colCount, reSet, getColCount, getColOffset }
+    return { col, colOffset, colCount, reSet, getColCount, getColOffset }
 }

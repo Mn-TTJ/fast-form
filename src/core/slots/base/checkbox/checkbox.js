@@ -1,4 +1,4 @@
-import { resolveComponent, reactive, ref } from "vue"
+import { resolveComponent, reactive } from "vue"
 import DrogBox from '@/components/panel/operation/components/drogBox/DrogBox.vue'
 import EditBox from '@/components/panel/operation/components/editBox/EditBox.vue'
 import ComponentBox from "@/components/panel/operation/components/componentBox/componentBox.vue"
@@ -15,26 +15,26 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
-            checkBox: {
+            checkbox: {
                 name: '',
                 disabled: false,
                 labels: ['标签1', '标签2', '标签3'],
                 all: false,
-                hasBorder: false
+                hasBorder: false,
+                class: []
             }
         })
 
-        const value = ref([])
-
         return <EditBox cProps={cProps.box} cName={'box'}>
             <ComponentBox cName='ui-box' cProps={cProps.box}>
-                <uiBox {...cProps.box}>
+                <uiBox {...cProps.box} >
                     <DrogBox disabled>
-                        <EditBox cProps={cProps.checkBox} cName={'checkBox'}>
-                            <ComponentBox cName='ui-checkBox' cProps={cProps.checkBox}>
-                                <uiCheckBox v-model={value.value}  {...cProps.checkBox} />
+                        <EditBox cProps={cProps.checkbox} cName={'checkbox'}>
+                            <ComponentBox cName='ui-checkbox' cProps={cProps.checkbox}>
+                                <uiCheckBox  {...cProps.checkbox} />
                             </ComponentBox>
                         </EditBox>
                     </DrogBox>

@@ -6,4 +6,4 @@ import editDialog from './editDialog/editDialog'
 import flodCard from './flodCard/flodCard'
 import box from './box/box'
 
-export default [['grid', grid], ['tabs', tabs], ['table', table], ['drawer', drawer], ['dialog', editDialog], ['flodCard', flodCard], ['box', box]]
+export default [['grid', grid], ['tabs', tabs], ['table', table], ['drawer', drawer], ['dialog', editDialog], ['card', flodCard], ['box', box]]

@@ -1,0 +1,813 @@
+[
+    {
+        "vNode": "ui-box",
+        "props": {
+            "flex": false,
+            "width": "100%",
+            "height": "auto",
+            "color": "#ffffff",
+            "padding": "0.1rem",
+            "margin": "0rem",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-text",
+                    "props": {
+                        "text": "单列表单",
+                        "row": 100,
+                        "ellipsis": false,
+                        "fontSize": "1rem",
+                        "fontWeight": "400",
+                        "color": "#2c3e50",
+                        "align": "left",
+                        "pre": true,
+                        "wrap": true,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": []
+                    },
+                    "flip": null
+                }
+            ]
+        }
+    },
+    {
+        "vNode": "ui-line",
+        "props": {
+            "thick": "1px",
+            "vertical": false,
+            "color": "#ebeef5",
+            "len": "100%",
+            "space": "0.5rem",
+            "dashed": false,
+            "class": []
+        },
+        "slots": {
+            "default": []
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-row",
+        "props": {
+            "justify": "flex-start",
+            "align": "center",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 4,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-text",
+                                            "props": {
+                                                "text": "姓名",
+                                                "row": 100,
+                                                "ellipsis": false,
+                                                "fontSize": "1rem",
+                                                "fontWeight": "400",
+                                                "color": "#2c3e50",
+                                                "align": "center",
+                                                "pre": true,
+                                                "wrap": true,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 20,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-input",
+                                            "props": {
+                                                "name": "",
+                                                "disabled": false,
+                                                "parser": "输入",
+                                                "max": 200,
+                                                "min": 0,
+                                                "clearable": false,
+                                                "password": false,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-row",
+        "props": {
+            "justify": "flex-start",
+            "align": "center",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 4,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-text",
+                                            "props": {
+                                                "text": "号码",
+                                                "row": 100,
+                                                "ellipsis": false,
+                                                "fontSize": "1rem",
+                                                "fontWeight": "400",
+                                                "color": "#2c3e50",
+                                                "align": "center",
+                                                "pre": true,
+                                                "wrap": true,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 20,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-input",
+                                            "props": {
+                                                "name": "",
+                                                "disabled": false,
+                                                "parser": "输入",
+                                                "max": 200,
+                                                "min": 0,
+                                                "clearable": false,
+                                                "password": false,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-row",
+        "props": {
+            "justify": "flex-start",
+            "align": "center",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 4,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-text",
+                                            "props": {
+                                                "text": "地址",
+                                                "row": 100,
+                                                "ellipsis": false,
+                                                "fontSize": "1rem",
+                                                "fontWeight": "400",
+                                                "color": "#2c3e50",
+                                                "align": "center",
+                                                "pre": true,
+                                                "wrap": true,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 20,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-input",
+                                            "props": {
+                                                "name": "",
+                                                "disabled": false,
+                                                "parser": "输入",
+                                                "max": 200,
+                                                "min": 0,
+                                                "clearable": false,
+                                                "password": false,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-row",
+        "props": {
+            "justify": "flex-start",
+            "align": "center",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 4,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-text",
+                                            "props": {
+                                                "text": "是否隐藏",
+                                                "row": 100,
+                                                "ellipsis": false,
+                                                "fontSize": "1rem",
+                                                "fontWeight": "400",
+                                                "color": "#2c3e50",
+                                                "align": "center",
+                                                "pre": true,
+                                                "wrap": true,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 20,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-switch",
+                                            "props": {
+                                                "name": "",
+                                                "disabled": false,
+                                                "sm": false,
+                                                "lg": false,
+                                                "trackColor": "#dcdfe6",
+                                                "sliderColor": "#ffffff",
+                                                "onColor": "#409eff"
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-line",
+        "props": {
+            "thick": "1px",
+            "vertical": false,
+            "color": "#ebeef5",
+            "len": "100%",
+            "space": "0.5rem",
+            "dashed": false,
+            "class": []
+        },
+        "slots": {
+            "default": []
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-row",
+        "props": {
+            "justify": "flex-start",
+            "align": "center",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 4,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-text",
+                                            "props": {
+                                                "text": "日期",
+                                                "row": 100,
+                                                "ellipsis": false,
+                                                "fontSize": "1rem",
+                                                "fontWeight": "400",
+                                                "color": "#2c3e50",
+                                                "align": "center",
+                                                "pre": true,
+                                                "wrap": true,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 20,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-datepicker",
+                                            "props": {
+                                                "name": "",
+                                                "disabled": false,
+                                                "week": true,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-row",
+        "props": {
+            "justify": "flex-start",
+            "align": "center",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 4,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-text",
+                                            "props": {
+                                                "text": "时间",
+                                                "row": 100,
+                                                "ellipsis": false,
+                                                "fontSize": "1rem",
+                                                "fontWeight": "400",
+                                                "color": "#2c3e50",
+                                                "align": "center",
+                                                "pre": true,
+                                                "wrap": true,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 20,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-timepicker",
+                                            "props": {
+                                                "name": "",
+                                                "disabled": false,
+                                                "min": "00:00:00",
+                                                "max": "23:59:59",
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-line",
+        "props": {
+            "thick": "1px",
+            "vertical": false,
+            "color": "#ebeef5",
+            "len": "100%",
+            "space": "0.5rem",
+            "dashed": false,
+            "class": []
+        },
+        "slots": {
+            "default": []
+        },
+        "flip": null
+    },
+    {
+        "vNode": "ui-row",
+        "props": {
+            "justify": "flex-start",
+            "align": "center",
+            "class": []
+        },
+        "slots": {
+            "default": [
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 4,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-text",
+                                            "props": {
+                                                "text": "补充",
+                                                "row": 100,
+                                                "ellipsis": false,
+                                                "fontSize": "1rem",
+                                                "fontWeight": "400",
+                                                "color": "#2c3e50",
+                                                "align": "center",
+                                                "pre": true,
+                                                "wrap": true,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "vNode": "ui-col",
+                    "props": {
+                        "colCount": 20,
+                        "colOffset": 0,
+                        "class": []
+                    },
+                    "slots": {
+                        "default": [
+                            {
+                                "vNode": "ui-box",
+                                "props": {
+                                    "flex": false,
+                                    "width": "100%",
+                                    "height": "auto",
+                                    "color": "#ffffff",
+                                    "padding": "0.1rem",
+                                    "margin": "0rem",
+                                    "class": []
+                                },
+                                "slots": {
+                                    "default": [
+                                        {
+                                            "vNode": "ui-textarea",
+                                            "props": {
+                                                "name": "",
+                                                "disabled": false,
+                                                "parser": "输入",
+                                                "max": 200,
+                                                "min": 0,
+                                                "minRow": 0,
+                                                "maxRow": 10,
+                                                "resizable": false,
+                                                "class": []
+                                            },
+                                            "slots": {
+                                                "default": []
+                                            },
+                                            "flip": null
+                                        }
+                                    ]
+                                }
+                            }
+                        ]
+                    }
+                }
+            ]
+        },
+        "flip": null
+    }
+]

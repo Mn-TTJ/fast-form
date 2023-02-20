@@ -15,7 +15,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             select: {
                 name: '',
@@ -24,6 +25,7 @@ export default (slots, name) => {
                 multiple: true,
                 lazy: false,
                 callBack: null,
+                class: []
             }
         })
 

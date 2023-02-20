@@ -14,7 +14,8 @@ export default (slots, name) => {
                 bottom: false,
                 top: false,
                 color: '#ffffff',
-                noHeader: true
+                noHeader: true,
+                class: []
             }
         })
 

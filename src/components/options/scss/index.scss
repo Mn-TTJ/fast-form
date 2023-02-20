@@ -32,3 +32,8 @@ button {
     border: none;
     cursor: pointer;
 }
+
+.disabled {
+    color: #626675;
+    cursor: not-allowed;
+}

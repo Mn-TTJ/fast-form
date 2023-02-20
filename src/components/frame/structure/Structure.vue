@@ -14,9 +14,6 @@
                 <div>
                     <slot name="operation"></slot>
                 </div>
-                <div>
-                    <slot name="coding"></slot>
-                </div>
             </section>
         </article>
         <aside>

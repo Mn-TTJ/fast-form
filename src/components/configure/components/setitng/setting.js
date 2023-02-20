@@ -1,4 +1,4 @@
-import { store } from '@/core/store/store.js'
+import { store, setCofNode } from '@/core/store/store.js'
 import { shallowRef, watch } from 'vue'
 import components from './components/index'
 
@@ -21,6 +21,12 @@ export default function (ele) {
             else ele.value.reSet()
         }
     })
+
+    watch(() => store.editor, () => {
+        if (!store.editor) {
+            setCofNode({ name: 'default' })
+        }
+    }, { immediate: true })
 
     return { confComponent }
 }

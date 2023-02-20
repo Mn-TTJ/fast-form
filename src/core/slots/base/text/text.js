@@ -15,7 +15,8 @@ export default (slots, name) => {
                 height: 'auto',
                 color: '#ffffff',
                 padding: '0.1rem',
-                margin: '0rem'
+                margin: '0rem',
+                class: []
             },
             text: {
                 text: 'text',
@@ -26,7 +27,8 @@ export default (slots, name) => {
                 color: '#2c3e50',
                 align: 'center',
                 pre: true,
-                wrap: true
+                wrap: true,
+                class: []
             }
         })
 
